@@ -1,5 +1,5 @@
 /* ============================================================
-   Le Ricette di Nonna Luisa — Script Principale
+   Le Ricette di Nonna Catia — Script Principale
    ============================================================ */
 
 'use strict';
@@ -85,7 +85,7 @@ function renderNavbar() {
 
         <a href="index.html" class="nav-brand" aria-label="Torna alla home">
           <i class="fa-solid fa-book-open-reader" aria-hidden="true"></i>
-          <span class="nav-brand-text">Le Ricette di <em>Nonna Luisa</em></span>
+          <span class="nav-brand-text">Le Ricette di <em>Nonna Catia</em></span>
         </a>
 
         <button class="nav-toggle" id="navToggle"
@@ -188,7 +188,7 @@ function renderFooter() {
           <div class="footer-brand-col">
             <div class="footer-brand">
               <i class="fa-solid fa-book-open-reader" aria-hidden="true"></i>
-              <h3>Le Ricette di<br><em>Nonna Luisa</em></h3>
+              <h3>Le Ricette di<br><em>Nonna Catia</em></h3>
             </div>
             <p class="footer-tagline">
               Una collezione di sapori autentici, tramandati con pazienza e amore
@@ -225,7 +225,7 @@ function renderFooter() {
         <div class="footer-bottom">
           <p>
             <i class="fa-solid fa-heart" aria-hidden="true"></i>
-            Le Ricette di Nonna Luisa &mdash; Con tutto l'amore della cucina di casa
+            Le Ricette di Nonna Catia &mdash; Con tutto l'amore della cucina di casa
             <i class="fa-solid fa-heart" aria-hidden="true"></i>
           </p>
         </div>
