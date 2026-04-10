@@ -107,7 +107,7 @@ function renderNavbar() {
                     aria-expanded="false"
                     aria-haspopup="true"
                     aria-controls="dropdownMenu">
-              Categorie
+              <i class="fa-solid fa-utensils" aria-hidden="true"></i> Ricette
               <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
             </button>
             <div class="nav-dropdown-menu" id="dropdownMenu" role="menu">
