@@ -30,7 +30,7 @@ const CATEGORIES = [
   {
     id: 'dolci',
     name: 'Dolci',
-    icon: 'fa-solid fa-cake-candles',
+    icon: 'fa-solid fa-stroopwafel',
     active: true,
     count: 11
   },
