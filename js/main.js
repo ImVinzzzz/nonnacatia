@@ -10,29 +10,22 @@ const CATEGORIES = [
     id: 'antipasti',
     name: 'Antipasti',
     icon: 'fa-solid fa-cheese',
-    active: true,
-    count: 8
+    active: false,
+    count: 0
   },
   {
-    id: 'primi-piatti',
+    id: 'primi',
     name: 'Primi Piatti',
     icon: 'fa-solid fa-bowl-food',
     active: true,
-    count: 12
+    count: 1
   },
   {
-    id: 'secondi-carne',
-    name: 'Secondi di Carne',
+    id: 'secondi',
+    name: 'Secondi Piatti',
     icon: 'fa-solid fa-drumstick-bite',
-    active: true,
-    count: 9
-  },
-  {
-    id: 'secondi-pesce',
-    name: 'Secondi di Pesce',
-    icon: 'fa-solid fa-fish',
-    active: true,
-    count: 6
+    active: false,
+    count: 0
   },
   {
     id: 'dolci',
@@ -48,6 +41,13 @@ const CATEGORIES = [
     active: false,
     count: 0
   },
+   {
+    id: 'speciali',
+    name: 'Occasioni Speciali',
+    icon: 'fa-solid fa-star',
+    active: false,
+    count: 0
+  },
   {
     id: 'piatti-unici',
     name: 'Piatti Unici',
@@ -59,8 +59,8 @@ const CATEGORIES = [
     id: 'pizza-focacce',
     name: 'Pizza e Focacce',
     icon: 'fa-solid fa-pizza-slice',
-    active: true,
-    count: 5
+    active: false,
+    count: 0
   }
 ];
 
