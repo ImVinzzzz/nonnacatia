@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Tagliatelle al Ragù della Nonna — Ricetta originale: pasta fresca con ragù lento cotto per ore. Le Ricette di Nonna Luisa." />
+
+  <title>Tagliatelle al Ragù della Nonna — Le Ricette di Nonna Luisa</title>
+
+  <!-- Font Awesome Free -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Foglio di stile -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Navbar (iniettata da JS) -->
+  <div id="navbar"></div>
+
+  <main>
+
+    <!-- ── INTESTAZIONE RICETTA ──────────────────────────── -->
+    <header class="recipe-page-header">
+      <div class="container">
+
+        <nav class="breadcrumb" aria-label="Posizione nella gerarchia">
+          <a href="index.html">
+            <i class="fa-solid fa-house" aria-hidden="true"></i> Home
+          </a>
+          <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+          <a href="primi-piatti.html">Primi Piatti</a>
+          <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+          <span>Tagliatelle al Ragù della Nonna</span>
+        </nav>
+
+        <div class="recipe-header-meta" style="margin-top:1.25rem;">
+          <span class="badge badge--cat">
+            <i class="fa-solid fa-bowl-food" aria-hidden="true"></i> Primi Piatti
+          </span>
+          <span class="badge badge--time">
+            <i class="fa-regular fa-clock" aria-hidden="true"></i> 3 h 30 min totali
+          </span>
+          <span class="badge badge--diff media">
+            <i class="fa-solid fa-gauge-simple-high" aria-hidden="true"></i> Media
+          </span>
+        </div>
+
+        <h1 class="recipe-title">Tagliatelle al Ragù<br>della Nonna</h1>
+        <em class="recipe-title-script">Il Piatto della Domenica</em>
+
+        <p class="recipe-intro">
+          Non esiste domenica senza il profumo del ragù che sobbolle sul fuoco
+          dal mattino presto. Questa è la ricetta di famiglia, quella che Nonna
+          Luisa preparava ogni settimana con la stessa cura e lo stesso amore.
+          Il segreto? Il tempo. Non si può avere fretta con un buon ragù.
+        </p>
+
+      </div>
+    </header>
+
+    <!-- ── LAYOUT A DUE COLONNE ──────────────────────────── -->
+    <div class="container">
+      <div class="recipe-layout">
+
+        <!-- ═══════════════════════════════════════════════ -->
+        <!-- COLONNA SINISTRA (1/3) — Sidebar               -->
+        <!-- ═══════════════════════════════════════════════ -->
+        <aside class="recipe-sidebar" aria-label="Informazioni e ingredienti">
+
+          <!-- Card info cottura -->
+          <div class="sidebar-card">
+            <div class="sidebar-card-header">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              Informazioni
+            </div>
+            <div class="sidebar-card-body">
+              <div class="cooking-info-grid">
+                <div class="info-item">
+                  <i class="fa-regular fa-clock" aria-hidden="true"></i>
+                  <span class="info-label">Preparazione</span>
+                  <span class="info-value">40 min</span>
+                </div>
+                <div class="info-item">
+                  <i class="fa-solid fa-fire-burner" aria-hidden="true"></i>
+                  <span class="info-label">Cottura</span>
+                  <span class="info-value">2 h 50 min</span>
+                </div>
+                <div class="info-item">
+                  <i class="fa-solid fa-users" aria-hidden="true"></i>
+                  <span class="info-label">Porzioni</span>
+                  <span class="info-value">4 persone</span>
+                </div>
+                <div class="info-item">
+                  <i class="fa-solid fa-gauge-simple-high" aria-hidden="true"></i>
+                  <span class="info-label">Difficoltà</span>
+                  <span class="info-value">Media</span>
+                </div>
+                <div class="info-item">
+                  <i class="fa-solid fa-leaf" aria-hidden="true"></i>
+                  <span class="info-label">Stagione</span>
+                  <span class="info-value">Tutto l'anno</span>
+                </div>
+                <div class="info-item">
+                  <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                  <span class="info-label">Occasione</span>
+                  <span class="info-value">Domenica</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Fine info cottura -->
+
+          <!-- Card ingredienti -->
+          <div class="sidebar-card">
+            <div class="sidebar-card-header">
+              <i class="fa-solid fa-list" aria-hidden="true"></i>
+              Ingredienti
+              <button id="resetChecklist"
+                      title="Deseleziona tutto"
+                      aria-label="Deseleziona tutti gli ingredienti"
+                      style="
+                        margin-left:auto;
+                        background:rgba(255,255,255,0.2);
+                        border:1px solid rgba(255,255,255,0.3);
+                        border-radius:6px;
+                        color:white;
+                        font-size:0.7rem;
+                        padding:0.2em 0.6em;
+                        cursor:pointer;
+                      ">
+                <i class="fa-solid fa-rotate-left" aria-hidden="true"></i> Reset
+              </button>
+            </div>
+            <div class="sidebar-card-body">
+
+              <p style="font-size:0.75rem; color:var(--ink-muted); font-style:italic; margin-bottom:0.75rem;">
+                <i class="fa-regular fa-hand-pointer" aria-hidden="true"></i>
+                Clicca per spuntare gli ingredienti
+              </p>
+
+              <div class="ingredient-list" role="list">
+
+                <!-- Per il Ragù -->
+                <p class="ingredient-section-label">Per il Ragù</p>
+
+                <div class="ingredient-item" role="listitem" data-ingredient="i1"
+                     tabindex="0" aria-label="300 g carne di manzo macinata">
+                  <span class="ingredient-check" aria-hidden="true"></span>
+                  <span class="ingredient-qty">300 g</span>
+                  <span class="ingredient-name">Carne di manzo macinata</span>
+                </div>
+                <div class="ingredient-item" role="listitem" data-ingredient="i2"
+                     tabindex="0">
+                  <span class="ingredient-check" aria-hidden="true"></span>
+                  <span class="ingredient-qty">150 g</span>
+                  <span class="ingredient-name">Carne di maiale macinata</span>
+                </div>
+                <div class="ingredient-item" role="listitem" data-ingredient="i3"
+                     tabindex="0">
+                  <span class="ingredient-check" aria-hidden="true"></span>
+                  <span class="ingredient-qty">1 fetta</span>
+                  <span class="ingredient-name">Pancetta tesa (60 g)</span>
+                </div>
+                <div class="ingredient-item" role="listitem" data-ingredient="i4"
+                     tabindex="0">
+                  <span class="ingredient-check" aria-hidden="true"></span>
+                  <span class="ingredient-qty">400 g</span>
+                  <span class="ingredient-name">Pomodori pelati San Marzano</span>
+                </div>
+                <div class="ingredient-item" role="listitem" data-ingredient="i5"
+                     tabindex="0">
+                  <span class="ingredient-check" aria-hidden="true"></span>
+                  <span class="ingredient-qty">1 bicchiere</span>
+                  <span class="ingredient-name">Vino rosso corposo</span>
+                </div>
+                <div class="ingredient-item" role="listitem" data-ingredient="i6"
+                     tabindex="0">
+                  <span class="ingredient-check" aria-hidden="true"></span>
+                  <span class="ingredient-qty">1 grande</span>
+                  <span class="ingredient-name">Cipolla dorata</span>
+                </div>
+                <div class="ingredient-item" role="listitem" data-ingredient="i7"
+                     tabindex="0">
+                  <span class="ingredient-check" aria-hidden="true"></span>
+                  <span class="ingredient-qty">2</span>
+                  <span class="ingredient-name">Carote</span>
+                </div>
+                <div class="ingredient-item" role="listitem" data-ingredient="i8"
+                     tabindex="0">
+                  <span class="ingredient-check" aria-hidden="true"></span>
+                  <span class="ingredient-qty">2 coste</span>
+                  <span class="ingredient-name">Sedano</span>
+                </div>
+                <div class="ingredient-item" role="listitem" data-ingredient="i9"
+                     tabindex="0">
+                  <span class="ingredient-check" aria-hidden="true"></span>
+                  <span class="ingredient-qty">2 cucchiai</span>
+                  <span class="ingredient-name">Concentrato di pomodoro</span>
+                </div>
+                <div class="ingredient-item" role="listitem" data-ingredient="i10"
+                     tabindex="0">
+                  <span class="ingredient-check" aria-hidden="true"></span>
+                  <span class="ingredient-qty">q.b.</span>
+                  <span class="ingredient-name">Olio EVO, sale, pepe</span>
+                </div>
+                <div class="ingredient-item" role="listitem" data-ingredient="i11"
+                     tabindex="0">
+                  <span class="ingredient-check" aria-hidden="true"></span>
+                  <span class="ingredient-qty">1 foglia</span>
+                  <span class="ingredient-name">Alloro</span>
+                </div>
+
+                <!-- Per le Tagliatelle -->
+                <p class="ingredient-section-label">Per le Tagliatelle</p>
+
+                <div class="ingredient-item" role="listitem" data-ingredient="i12"
+                     tabindex="0">
+                  <span class="ingredient-check" aria-hidden="true"></span>
+                  <span class="ingredient-qty">400 g</span>
+                  <span class="ingredient-name">Farina 00</span>
+                </div>
+                <div class="ingredient-item" role="listitem" data-ingredient="i13"
+                     tabindex="0">
+                  <span class="ingredient-check" aria-hidden="true"></span>
+                  <span class="ingredient-qty">4</span>
+                  <span class="ingredient-name">Uova grandi (a temperatura ambiente)</span>
+                </div>
+                <div class="ingredient-item" role="listitem" data-ingredient="i14"
+                     tabindex="0">
+                  <span class="ingredient-check" aria-hidden="true"></span>
+                  <span class="ingredient-qty">1 pizzico</span>
+                  <span class="ingredient-name">Sale fino</span>
+                </div>
+
+                <!-- Per servire -->
+                <p class="ingredient-section-label">Per servire</p>
+
+                <div class="ingredient-item" role="listitem" data-ingredient="i15"
+                     tabindex="0">
+                  <span class="ingredient-check" aria-hidden="true"></span>
+                  <span class="ingredient-qty">abbondante</span>
+                  <span class="ingredient-name">Parmigiano Reggiano 24 mesi</span>
+                </div>
+
+              </div>
+              <!-- Fine lista ingredienti -->
+
+            </div>
+          </div>
+          <!-- Fine card ingredienti -->
+
+          <!-- Card note della nonna -->
+          <div class="sidebar-card">
+            <div class="sidebar-card-header">
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              I Segreti di Nonna
+            </div>
+            <div class="sidebar-card-body">
+              <div class="notes-text">
+                <p>
+                  <strong style="color:var(--bordeaux)">Il brodo è tutto.</strong>
+                  Se hai tempo, fai un brodo di carne la sera prima: il ragù
+                  ne guadagna moltissimo.
+                </p>
+                <p>
+                  Le tagliatelle devono essere <em>larghe 8 mm</em> — non meno,
+                  non più. Nonna sosteneva che la larghezza giusta è quella
+                  di 1/12 della larghezza della sfoglia.
+                </p>
+                <p>
+                  Non avere fretta: un ragù di due ore e mezzo è buono,
+                  uno di quattro ore è sublime.
+                </p>
+                <p>
+                  <strong style="color:var(--bordeaux)">Il giorno dopo</strong>
+                  è ancora più buono. Fanne sempre il doppio.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </aside>
+        <!-- Fine sidebar -->
+
+        <!-- ═══════════════════════════════════════════════ -->
+        <!-- COLONNA DESTRA (2/3) — Preparazione            -->
+        <!-- ═══════════════════════════════════════════════ -->
+        <article class="recipe-preparation" aria-label="Preparazione della ricetta">
+
+          <p class="prep-intro">
+            Questa ricetta richiede pazienza, ma ogni minuto è ripagato
+            dal primo assaggio. Inizia dal ragù: più a lungo cuoce, più
+            diventa ricco e saporito. La pasta fresca si può preparare
+            mentre il sugo sobbolle.
+          </p>
+
+          <!-- ── Sezione 1: Il Soffritto e la Carne ── -->
+          <section class="prep-section" aria-labelledby="section1-title">
+            <h2 class="prep-section-title" id="section1-title">
+              <span class="step-badge" aria-hidden="true">1</span>
+              Il Soffritto e la Carne
+            </h2>
+            <div class="prep-steps">
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 1">1</span>
+                <p class="step-text">
+                  Trita finemente la <strong>cipolla, le carote e il sedano</strong>
+                  (il classico soffritto italiano). Metti tutto in una casseruola
+                  capiente con un filo generoso d'olio extravergine e fai soffriggere
+                  a fuoco medio-basso per almeno <em>15 minuti</em>, mescolando spesso,
+                  finché le verdure non sono completamente appassite e quasi trasparenti.
+                </p>
+              </div>
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 2">2</span>
+                <p class="step-text">
+                  Aggiungi la <strong>pancetta tritata</strong> e falla rosolare
+                  per qualche minuto finché non comincia a diventare croccante
+                  e rilascia il suo grasso profumato.
+                </p>
+              </div>
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 3">3</span>
+                <p class="step-text">
+                  Alza la fiamma e unisci la <strong>carne macinata mista</strong>.
+                  Rosolala bene, spezzettandola con il cucchiaio di legno, finché
+                  non è uniformemente brunita su tutti i lati. Questo passaggio è
+                  fondamentale: la rosolatura crea sapore. Non affrettare.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- ── Sezione 2: La Cottura del Ragù ── -->
+          <section class="prep-section" aria-labelledby="section2-title">
+            <h2 class="prep-section-title" id="section2-title">
+              <span class="step-badge" aria-hidden="true">2</span>
+              La Cottura Lenta del Ragù
+            </h2>
+            <div class="prep-steps">
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 4">4</span>
+                <p class="step-text">
+                  Versa il <strong>vino rosso</strong> sulla carne rosolata e alza
+                  la fiamma: lascia evaporare completamente l'alcool mescolando,
+                  circa 3–4 minuti. Sentirai il profumo cambiare quando l'alcool
+                  è scomparso.
+                </p>
+              </div>
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 5">5</span>
+                <p class="step-text">
+                  Aggiungi il <strong>concentrato di pomodoro</strong>, mescola
+                  bene e lascia tostare per un paio di minuti — diventerà di
+                  un bel colore scuro intenso. Poi unisci i
+                  <strong>pomodori pelati</strong> spezzandoli con le mani
+                  direttamente nel tegame.
+                </p>
+              </div>
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 6">6</span>
+                <p class="step-text">
+                  Aggiusta di sale e pepe, unisci la <strong>foglia di alloro</strong>
+                  e abbassa la fiamma al minimo. Copri con un coperchio lasciato
+                  leggermente aperto e lascia cuocere per almeno
+                  <em>2 ore e mezza</em>, mescolando ogni 20–30 minuti.
+                  Se si asciuga troppo, aggiungi un mestolo di brodo caldo
+                  (o acqua calda).
+                </p>
+              </div>
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 7">7</span>
+                <p class="step-text">
+                  Il ragù è pronto quando è diventato denso, scuro, profumato
+                  e la carne quasi si disfa. Rimuovi la foglia di alloro,
+                  assaggia e aggiusta di sale. <strong>Più lo lasci cuocere,
+                  meglio è</strong> — nonna arrivava anche a quattro ore.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- ── Sezione 3: La Pasta Fresca ── -->
+          <section class="prep-section" aria-labelledby="section3-title">
+            <h2 class="prep-section-title" id="section3-title">
+              <span class="step-badge" aria-hidden="true">3</span>
+              Le Tagliatelle Fresche
+            </h2>
+            <div class="prep-steps">
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 8">8</span>
+                <p class="step-text">
+                  Versa la <strong>farina a fontana</strong> sul piano di lavoro
+                  infarinato. Rompi le uova al centro, aggiungi il pizzico di sale.
+                  Sbatti leggermente le uova con una forchetta, poi inizia
+                  ad incorporare la farina dall'interno verso l'esterno.
+                </p>
+              </div>
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 9">9</span>
+                <p class="step-text">
+                  Quando l'impasto è abbastanza compatto per essere lavorato
+                  a mano, inizia a <strong>impastare energicamente</strong> per
+                  almeno <em>10 minuti</em>: spingi, piega, ruota. L'impasto
+                  deve diventare liscio, omogeneo, elastico e non appiccicoso.
+                  Forma una palla, avvolgila nella pellicola e lasciala riposare
+                  30 minuti a temperatura ambiente.
+                </p>
+              </div>
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 10">10</span>
+                <p class="step-text">
+                  Dividi l'impasto in 4 parti. Con il mattarello (o la macchina
+                  per la pasta), stendi ogni parte fino a ottenere una sfoglia
+                  sottile <em>(circa 2 mm)</em>. Spolvera abbondantemente di farina,
+                  arrotola la sfoglia su sé stessa e taglia delle strisce di
+                  <strong>circa 8 mm</strong>. Srotola e distendi le tagliatelle
+                  su un canovaccio infarinato.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- ── Sezione 4: Cottura e Impiattamento ── -->
+          <section class="prep-section" aria-labelledby="section4-title">
+            <h2 class="prep-section-title" id="section4-title">
+              <span class="step-badge" aria-hidden="true">4</span>
+              Cottura e Impiattamento
+            </h2>
+            <div class="prep-steps">
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 11">11</span>
+                <p class="step-text">
+                  Porta ad ebollizione una grande pentola di acqua abbondante.
+                  Sala generosamente — <strong>l'acqua deve essere sapida
+                  come il mare</strong>. Tuffa le tagliatelle e cuocile per
+                  <em>2–3 minuti</em> (la pasta fresca cuoce in fretta).
+                  Assaggia: devono essere al dente, con ancora un leggero
+                  accenno di resistenza al morso.
+                </p>
+              </div>
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 12">12</span>
+                <p class="step-text">
+                  Scola le tagliatelle <strong>tenendo da parte un mestolo
+                  di acqua di cottura</strong>. Versale direttamente nel
+                  tegame del ragù (a fuoco vivo), mescola energicamente
+                  aggiungendo un goccio di acqua di cottura se necessario
+                  per mantecare: il sugo deve avvolgere ogni singola tagliatella.
+                </p>
+              </div>
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 13">13</span>
+                <p class="step-text">
+                  Servi subito nei piatti fondi, con una generosa grattata
+                  di <strong>Parmigiano Reggiano</strong>. A tavola, niente
+                  fretta: questo piatto merita di essere mangiato lentamente,
+                  in compagnia, con un buon bicchiere di Sangiovese.
+                  <em>Buon appetito!</em>
+                </p>
+              </div>
+            </div>
+          </section>
+
+        </article>
+        <!-- Fine preparazione -->
+
+      </div>
+      <!-- Fine recipe-layout -->
+    </div>
+    <!-- Fine container -->
+
+  </main>
+
+  <!-- Footer (iniettato da JS) -->
+  <div id="footer"></div>
+
+  <!-- Script principale -->
+  <script src="js/main.js"></script>
+
+  <!-- Accessibilità: Enter per spuntare ingredienti da tastiera -->
+  <script>
+    document.querySelectorAll('.ingredient-item[tabindex]').forEach(item => {
+      item.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          item.click();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
