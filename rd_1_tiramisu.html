@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Tiramisù Classico Italiano — Savoiardi imbevuti nel caffè, crema al mascarpone e uova, spolverato con cacao amaro. Le Ricette di Nonna Luisa." />
+
+  <title>Tiramisù Classico — Le Ricette di Nonna Luisa</title>
+
+  <!-- Font Awesome Free -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Foglio di stile -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Navbar (iniettata da JS) -->
+  <div id="navbar"></div>
+
+  <main>
+
+    <!-- ── INTESTAZIONE RICETTA ──────────────────────────── -->
+    <header class="recipe-page-header">
+      <div class="container">
+
+        <nav class="breadcrumb" aria-label="Posizione nella gerarchia">
+          <a href="index.html">
+            <i class="fa-solid fa-house" aria-hidden="true"></i> Home
+          </a>
+          <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+          <a href="dolci.html">Dolci</a>
+          <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+          <span>Tiramisù Classico Italiano</span>
+        </nav>
+
+        <div class="recipe-header-meta" style="margin-top:1.25rem;">
+          <span class="badge badge--cat">
+            <i class="fa-solid fa-cake-candles" aria-hidden="true"></i> Dolci
+          </span>
+          <span class="badge badge--time">
+            <i class="fa-regular fa-clock" aria-hidden="true"></i> 30 min + riposo
+          </span>
+          <span class="badge badge--diff facile">
+            <i class="fa-solid fa-gauge-simple-high" aria-hidden="true"></i> Facile
+          </span>
+        </div>
+
+        <h1 class="recipe-title">Tiramisù<br>Classico Italiano</h1>
+        <em class="recipe-title-script">Il Dolce al Cucchiaio per Eccellenza</em>
+
+        <p class="recipe-intro">
+          Savoiardi imbevuti nel caffè espresso, una crema vellutata di mascarpone
+          e uova montate, una nuvola di cacao amaro in superficie. Il tiramisù
+          è uno di quei dolci che non tramontano mai: semplice da preparare,
+          impossibile da resistere. Il segreto è nel riposo: più aspetti,
+          più i sapori si fondono in qualcosa di straordinario.
+        </p>
+
+      </div>
+    </header>
+
+    <!-- ── LAYOUT A DUE COLONNE ──────────────────────────── -->
+    <div class="container">
+      <div class="recipe-layout">
+
+        <!-- ═══════════════════════════════════════════════ -->
+        <!-- COLONNA SINISTRA (1/3) — Sidebar               -->
+        <!-- ═══════════════════════════════════════════════ -->
+        <aside class="recipe-sidebar" aria-label="Informazioni e ingredienti">
+
+          <!-- Card info cottura -->
+          <div class="sidebar-card">
+            <div class="sidebar-card-header">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              Informazioni
+            </div>
+            <div class="sidebar-card-body">
+              <div class="cooking-info-grid">
+                <div class="info-item">
+                  <i class="fa-regular fa-clock" aria-hidden="true"></i>
+                  <span class="info-label">Preparazione</span>
+                  <span class="info-value">30 min</span>
+                </div>
+                <div class="info-item">
+                  <i class="fa-solid fa-fire-burner" aria-hidden="true"></i>
+                  <span class="info-label">Cottura</span>
+                  <span class="info-value">Nessuna</span>
+                </div>
+                <div class="info-item">
+                  <i class="fa-solid fa-snowflake" aria-hidden="true"></i>
+                  <span class="info-label">Riposo</span>
+                  <span class="info-value">min. 2 ore</span>
+                </div>
+                <div class="info-item">
+                  <i class="fa-solid fa-users" aria-hidden="true"></i>
+                  <span class="info-label">Porzioni</span>
+                  <span class="info-value">6–8 pers.</span>
+                </div>
+                <div class="info-item">
+                  <i class="fa-solid fa-gauge-simple-high" aria-hidden="true"></i>
+                  <span class="info-label">Difficoltà</span>
+                  <span class="info-value">Facile</span>
+                </div>
+                <div class="info-item">
+                  <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                  <span class="info-label">Occasione</span>
+                  <span class="info-value">Sempre!</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card ingredienti -->
+          <div class="sidebar-card">
+            <div class="sidebar-card-header">
+              <i class="fa-solid fa-list" aria-hidden="true"></i>
+              Ingredienti
+              <button id="resetChecklist"
+                      title="Deseleziona tutto"
+                      aria-label="Deseleziona tutti gli ingredienti"
+                      style="
+                        margin-left:auto;
+                        background:rgba(255,255,255,0.2);
+                        border:1px solid rgba(255,255,255,0.3);
+                        border-radius:6px;
+                        color:white;
+                        font-size:0.7rem;
+                        padding:0.2em 0.6em;
+                        cursor:pointer;
+                      ">
+                <i class="fa-solid fa-rotate-left" aria-hidden="true"></i> Reset
+              </button>
+            </div>
+            <div class="sidebar-card-body">
+
+              <p style="font-size:0.75rem; color:var(--ink-muted); font-style:italic; margin-bottom:0.75rem;">
+                <i class="fa-regular fa-hand-pointer" aria-hidden="true"></i>
+                Clicca per spuntare gli ingredienti
+              </p>
+
+              <div class="ingredient-list" role="list">
+
+                <p class="ingredient-section-label">Per la crema</p>
+
+                <div class="ingredient-item" role="listitem" data-ingredient="t1"
+                     tabindex="0" aria-label="3 uova fresche, tuorli e albumi separati">
+                  <span class="ingredient-check" aria-hidden="true"></span>
+                  <span class="ingredient-qty">3</span>
+                  <span class="ingredient-name">Uova fresche (tuorli e albumi separati)</span>
+                </div>
+                <div class="ingredient-item" role="listitem" data-ingredient="t2"
+                     tabindex="0">
+                  <span class="ingredient-check" aria-hidden="true"></span>
+                  <span class="ingredient-qty">100 g</span>
+                  <span class="ingredient-name">Zucchero semolato</span>
+                </div>
+                <div class="ingredient-item" role="listitem" data-ingredient="t3"
+                     tabindex="0">
+                  <span class="ingredient-check" aria-hidden="true"></span>
+                  <span class="ingredient-qty">250 g</span>
+                  <span class="ingredient-name">Mascarpone freddo</span>
+                </div>
+
+                <p class="ingredient-section-label">Per la base</p>
+
+                <div class="ingredient-item" role="listitem" data-ingredient="t4"
+                     tabindex="0">
+                  <span class="ingredient-check" aria-hidden="true"></span>
+                  <span class="ingredient-qty">200 g</span>
+                  <span class="ingredient-name">Savoiardi</span>
+                </div>
+                <div class="ingredient-item" role="listitem" data-ingredient="t5"
+                     tabindex="0">
+                  <span class="ingredient-check" aria-hidden="true"></span>
+                  <span class="ingredient-qty">300 ml</span>
+                  <span class="ingredient-name">Caffè espresso forte, zuccherato a piacere</span>
+                </div>
+
+                <p class="ingredient-section-label">Per finire</p>
+
+                <div class="ingredient-item" role="listitem" data-ingredient="t6"
+                     tabindex="0">
+                  <span class="ingredient-check" aria-hidden="true"></span>
+                  <span class="ingredient-qty">q.b.</span>
+                  <span class="ingredient-name">Cacao amaro in polvere</span>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Card variante -->
+          <div class="sidebar-card">
+            <div class="sidebar-card-header">
+              <i class="fa-solid fa-flask" aria-hidden="true"></i>
+              Variante senza uova crude
+            </div>
+            <div class="sidebar-card-body">
+              <div class="notes-text">
+                <p>
+                  Per una versione più sicura si possono usare
+                  <strong style="color:var(--bordeaux)">tuorli e albumi pastorizzati</strong>,
+                  reperibili al supermercato.
+                </p>
+                <p>
+                  In alternativa, sostituisci gli albumi con
+                  <em>200 ml di panna fresca montata a neve morbida</em>:
+                  la crema risulterà leggermente più leggera ma altrettanto
+                  soffice e golosa.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card note della nonna -->
+          <div class="sidebar-card">
+            <div class="sidebar-card-header">
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              I Segreti di Nonna
+            </div>
+            <div class="sidebar-card-body">
+              <div class="notes-text">
+                <p>
+                  <strong style="color:var(--bordeaux)">Il mascarpone deve essere freddo</strong>
+                  di frigorifero, le uova a temperatura ambiente: questo garantisce
+                  stabilità alla crema e la impedisce di "impazzire".
+                </p>
+                <p>
+                  Non inzuppare troppo i savoiardi: un passaggio rapido
+                  nel caffè basta. Se si imbevano troppo, la base diventa molliccio.
+                  <em>Un secondo per lato, non di più.</em>
+                </p>
+                <p>
+                  <strong style="color:var(--bordeaux)">Il cacao va spolverato solo prima di servire:</strong>
+                  se applicato troppo in anticipo assorbe umidità e perde
+                  il suo profumo intenso.
+                </p>
+                <p>
+                  Per un effetto elegante, con un
+                  <em>sac à poche</em> fai dei ciuffetti di crema sull'ultimo
+                  strato prima di spolverare il cacao.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </aside>
+
+        <!-- ═══════════════════════════════════════════════ -->
+        <!-- COLONNA DESTRA (2/3) — Preparazione            -->
+        <!-- ═══════════════════════════════════════════════ -->
+        <article class="recipe-preparation" aria-label="Preparazione della ricetta">
+
+          <p class="prep-intro">
+            Il tiramisù non richiede cottura, ma vuole attenzione e
+            rispetto dei passaggi: ogni strato costruisce il successivo.
+            Prepara tutto con calma — dalla crema alla composizione finale
+            bastano meno di 30 minuti — poi lascia che il frigorifero
+            faccia il resto del lavoro.
+          </p>
+
+          <!-- ── Sezione 1: Il Caffè e i Tuorli ── -->
+          <section class="prep-section" aria-labelledby="tira-section1">
+            <h2 class="prep-section-title" id="tira-section1">
+              <span class="step-badge" aria-hidden="true">1</span>
+              Il Caffè e la Crema ai Tuorli
+            </h2>
+            <div class="prep-steps">
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 1">1</span>
+                <p class="step-text">
+                  Prepara il caffè espresso — più forte è, meglio è — e versalo
+                  in una ciotola ampia e dai bordi bassi, comoda per inzuppare i
+                  savoiardi. Aggiungilo zucchero a piacere. <strong>Lascialo
+                  raffreddare completamente</strong> a temperatura ambiente
+                  prima di usarlo: il caffè caldo rammollirebbe i biscotti
+                  invece di profumarli.
+                </p>
+              </div>
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 2">2</span>
+                <p class="step-text">
+                  Separa i tuorli dagli albumi, tenendoli in due ciotole capaci.
+                  Metti gli albumi da parte in frigorifero. In una ciotola capiente,
+                  sbatti i <strong>tuorli con metà dello zucchero</strong> (50 g)
+                  usando le fruste elettriche a velocità media, per circa 4–5 minuti,
+                  fino a ottenere un composto <em>chiaro, gonfio e spumoso</em>
+                  che scende a nastro dalle fruste.
+                </p>
+              </div>
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 3">3</span>
+                <p class="step-text">
+                  Aggiungi il <strong>mascarpone freddo</strong> a cucchiaiate
+                  ai tuorli montati, incorporandolo con una spatola o le fruste
+                  a bassa velocità. Lavora il composto con delicatezza ma con
+                  decisione, fino a ottenere una crema <em>densa, liscia e
+                  compatta</em>, senza grumi. Non lavorarla eccessivamente
+                  o potrebbe separarsi.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- ── Sezione 2: Gli Albumi a Neve ── -->
+          <section class="prep-section" aria-labelledby="tira-section2">
+            <h2 class="prep-section-title" id="tira-section2">
+              <span class="step-badge" aria-hidden="true">2</span>
+              Gli Albumi a Neve e la Crema Finale
+            </h2>
+            <div class="prep-steps">
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 4">4</span>
+                <p class="step-text">
+                  Assicurati che la ciotola e le fruste siano perfettamente
+                  pulite e asciutte — anche una goccia di grasso impedisce agli
+                  albumi di montare. Inizia a montare gli albumi a velocità media,
+                  poi quando cominciano a schiumare aggiungi il <strong>restante
+                  zucchero</strong> (50 g) a pioggia, alzando la velocità.
+                  Continua finché non ottieni una meringa <em>ferma e lucida</em>,
+                  che forma picchi sodi quando sollevi le fruste.
+                </p>
+              </div>
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 5">5</span>
+                <p class="step-text">
+                  Incorpora gli albumi alla crema di mascarpone in
+                  <strong>tre riprese</strong>: la prima con movimenti più decisi
+                  per alleggerire la crema, le successive due con la spatola,
+                  muovendo <em>dal basso verso l'alto</em> con gesti ampi e lenti.
+                  L'obiettivo è mantenere tutta l'aria incorporata negli albumi:
+                  è lei che rende il tiramisù soffice e leggero.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- ── Sezione 3: Composizione ── -->
+          <section class="prep-section" aria-labelledby="tira-section3">
+            <h2 class="prep-section-title" id="tira-section3">
+              <span class="step-badge" aria-hidden="true">3</span>
+              Composizione a Strati
+            </h2>
+            <div class="prep-steps">
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 6">6</span>
+                <p class="step-text">
+                  Scegli una <strong>pirofila rettangolare</strong> (circa 20×30 cm)
+                  oppure bicchieri o coppette individuali per un servizio elegante.
+                  Immergi i savoiardi nel caffè freddo uno alla volta:
+                  <em>un passaggio rapido per lato</em>, un secondo ciascuno —
+                  devono assorbire il caffè senza inzupparsi troppo.
+                  Disponili in un unico strato sul fondo del contenitore,
+                  affiancati ordinatamente.
+                </p>
+              </div>
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 7">7</span>
+                <p class="step-text">
+                  Versa metà della crema al mascarpone sui savoiardi e
+                  distribuiscila uniformemente con una spatola, formando
+                  uno strato omogeneo. Poi realizza un <strong>secondo strato
+                  di savoiardi</strong> inzuppati nel caffè, seguiti dall'altra
+                  metà della crema. Livella bene la superficie.
+                  Per una presentazione ricercata, usa un <em>sac à poche</em>
+                  per fare dei ciuffetti di crema decorativi sull'ultimo strato.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- ── Sezione 4: Riposo e Servizio ── -->
+          <section class="prep-section" aria-labelledby="tira-section4">
+            <h2 class="prep-section-title" id="tira-section4">
+              <span class="step-badge" aria-hidden="true">4</span>
+              Riposo e Servizio
+            </h2>
+            <div class="prep-steps">
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 8">8</span>
+                <p class="step-text">
+                  Copri il tiramisù con pellicola alimentare e trasferiscilo
+                  in frigorifero per almeno <strong>2 ore</strong>. Meglio ancora
+                  <em>6 ore</em>, o tutta la notte: il riposo è il passaggio
+                  più importante della ricetta. In questo tempo i savoiardi
+                  completano l'assorbimento del caffè, la crema si rassoda
+                  e tutti i sapori si fondono in un'unica armonia.
+                </p>
+              </div>
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 9">9</span>
+                <p class="step-text">
+                  <strong>Solo al momento di servire</strong>, spolvera
+                  abbondantemente la superficie con il <strong>cacao amaro
+                  in polvere</strong> passato attraverso un colino a maglie
+                  fini, per uno strato uniforme e vellutato.
+                  Servi il tiramisù ben freddo, tagliato a porzioni regolari
+                  con una spatola. <em>Buon appetito!</em>
+                </p>
+              </div>
+            </div>
+          </section>
+
+        </article>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer (iniettato da JS) -->
+  <div id="footer"></div>
+
+  <!-- Script principale -->
+  <script src="js/main.js"></script>
+
+  <script>
+    document.querySelectorAll('.ingredient-item[tabindex]').forEach(item => {
+      item.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          item.click();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
