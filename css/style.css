@@ -778,39 +778,38 @@ button { font-family: inherit; }
 
 .sidebar-card-body { padding: 1.25rem; }
 
-/* Info cottura */
-.cooking-info-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.75rem;
+/* Info cottura — layout a righe */
+.cooking-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
 }
 .info-item {
-  text-align: center;
-  padding: 0.8rem 0.5rem;
-  background: var(--cream);
-  border-radius: var(--radius);
-  border: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--border-light);
+  font-size: 0.88rem;
 }
+.info-item:last-child { border-bottom: none; }
 .info-item i {
-  font-size: 1.3rem;
+  font-size: 0.95rem;
   color: var(--terracotta);
-  display: block;
-  margin-bottom: 0.3rem;
+  width: 1.1em;
+  text-align: center;
+  flex-shrink: 0;
 }
 .info-label {
-  display: block;
-  font-size: 0.65rem;
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
   color: var(--ink-muted);
-  margin-bottom: 0.25rem;
+  flex: 1;
 }
 .info-value {
-  display: block;
   font-family: var(--font-display);
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   font-weight: 600;
   color: var(--ink);
+  text-align: right;
 }
 
 /* Lista ingredienti */
