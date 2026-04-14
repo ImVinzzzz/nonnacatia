@@ -1182,6 +1182,14 @@ button { font-family: inherit; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .footer-info-col { grid-column: 1 / -1; }
   .recipe-layout { gap: 2rem; }
+   .recipe-header-inner {
+  grid-template-columns: 1fr;
+}
+.recipe-header-image {
+  aspect-ratio: 16 / 9;
+  order: 1;          /* scorre sotto il testo */
+}
+.recipe-header-text { order: 0; }
 }
 
 /* Tablet */
