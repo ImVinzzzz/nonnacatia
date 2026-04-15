@@ -50,7 +50,7 @@ const CATEGORIES = [
     id: 'speciali',
     name: 'Occasioni Speciali',
     icon: 'fa-solid fa-star',
-    active: false,
+    active: true,
     count: 0,
     img: '../img_home/occasioni.jpg'
   },
