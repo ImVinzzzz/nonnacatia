@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Primi Piatti — Le Ricette di Nonna Luisa. Pasta fresca, risotti, minestre e molto altro dalla tradizione italiana." />
+
+  <title>Dolci — Le Ricette di Nonna Luisa</title>
+
+  <!-- Font Awesome Free -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Foglio di stile -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Stile specifico per le card in lista
+       (nel caso si voglia sovrascrivere o estendere) -->
+</head>
+<body>
+
+  <!-- Navbar (iniettata da JS) -->
+  <div id="navbar"></div>
+
+  <main>
+
+    <!-- ── INTESTAZIONE PAGINA ───────────────────────────── -->
+    <header class="page-header">
+      <div class="container">
+        <div class="page-header-inner">
+
+          <div class="page-header-icon" aria-hidden="true">
+            <i class="fa-solid fa-stroopwafel"></i>
+          </div>
+
+          <div class="page-header-text">
+            <nav class="breadcrumb" aria-label="Posizione nella gerarchia">
+              <a href="index.html"><i class="fa-solid fa-house" aria-hidden="true"></i> Home</a>
+              <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+              <span>Dolci</span>
+            </nav>
+            <h1 class="page-header-title">Dolci</h1>
+            <p class="page-header-count">
+              <i class="fa-regular fa-bookmark" aria-hidden="true"></i>
+              12 ricette della tradizione
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </header>
+
+    <!-- ── LISTA RICETTE ─────────────────────────────────── -->
+    <section class="recipe-list-section" aria-label="Elenco delle ricette">
+      <div class="container">
+        <div class="recipe-grid">
+
+          <!-- Ricetta 1 -->
+          <article class="recipe-card animate-on-scroll" style="--delay:0.05s">
+            <div class="recipe-card-meta">
+              <span class="badge badge--time">
+                <i class="fa-regular fa-clock" aria-hidden="true"></i> 30 min + riposo
+              </span>
+              <span class="badge badge--diff facile">Facile</span>
+            </div>
+            <h2 class="recipe-card-title">
+              <a href="rd_1_tiramisu.html">Tiramisù Classico alla Vincenzo</a>
+            </h2>
+            <p class="recipe-card-subtitle">Il Dolce al Cucchiaio per Eccellenza</p>
+            <p class="recipe-card-desc">
+              Savoiardi imbevuti nel caffè espresso, 
+              una crema vellutata di mascarpone e uova montate, 
+              una nuvola di cacao amaro in superficie (opzionale). 
+            </p>
+            <a href="rd_1_tiramisu.html" class="recipe-card-link">
+              Vedi la ricetta
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </article>
+
+          <!-- Ricetta 2 -->
+          <article class="recipe-card animate-on-scroll" style="--delay:0.1s">
+            <div class="recipe-card-meta">
+              <span class="badge badge--time">
+                <i class="fa-regular fa-clock" aria-hidden="true"></i> 1 h 30 min
+              </span>
+              <span class="badge badge--diff facile">Facile</span>
+            </div>
+            <h2 class="recipe-card-title">
+              <a href="rd_2_ferratelle-irma.html">Ferratelle di Irma</a>
+            </h2>
+            <p class="recipe-card-subtitle">Il Dolce delle Feste in Abruzzo</p>
+            <p class="recipe-card-desc">
+              Croccanti, profumate, con quel tocco inconfondibile di sambuca che le rende uniche. 
+              Ogni famiglia ha la sua ricetta, gelosamente custodita. 
+              Questa è quella di Irma — dosi generose, impasto sodo e tanta pazienza. 
+              Ne vengono tante, ma spariscono ancora più in fretta.
+            </p>
+            <a href="#" class="recipe-card-link">
+              Vedi la ricetta
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </article>
+
+          <!-- Ricetta 3 -->
+          <article class="recipe-card animate-on-scroll" style="--delay:0.15s">
+            <div class="recipe-card-meta">
+              <span class="badge badge--time">
+                <i class="fa-regular fa-clock" aria-hidden="true"></i> 4–5 h (con lievitazione)
+              </span>
+              <span class="badge badge--diff difficile">Difficile</span>
+            </div>
+            <h2 class="recipe-card-title">
+              <a href="rd_3_pizza-pasqua.html">Pizza di Pasqua</a>
+            </h2>
+            <p class="recipe-card-subtitle">Il Profumo della Settimana Santa</p>
+            <p class="recipe-card-desc">
+              La pizza di Pasqua non è una pizza e non è una torta: 
+              è qualcosa di unico — un pane dolce lievitato, soffice dentro e dorato fuori, 
+              profumato di agrumi, cannella, maraschino e rum. 
+              Si mangia a colazione la mattina di Pasqua.
+            </p>
+            <a href="#" class="recipe-card-link">
+              Vedi la ricetta
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </article>
+
+          <!-- Ricetta 4 -->
+          <article class="recipe-card animate-on-scroll" style="--delay:0.2s">
+            <div class="recipe-card-meta">
+              <span class="badge badge--time">
+                <i class="fa-regular fa-clock" aria-hidden="true"></i> 2 h
+              </span>
+              <span class="badge badge--diff difficile">Difficile</span>
+            </div>
+            <h2 class="recipe-card-title">
+              <a href="#">Lasagne al Forno della Nonna</a>
+            </h2>
+            <p class="recipe-card-subtitle">Alta, Stratificata, Indimenticabile</p>
+            <p class="recipe-card-desc">
+              Sfoglia fresca tirata a mano, ragù abbondante, besciamella
+              vellutata e tanto parmigiano grattugiato. Un'architettura
+              di sapori che richiede tempo ma ripaga ogni minuto.
+            </p>
+            <a href="#" class="recipe-card-link">
+              Vedi la ricetta
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </article>
+
+          <!-- Ricetta 5 -->
+          <article class="recipe-card animate-on-scroll" style="--delay:0.25s">
+            <div class="recipe-card-meta">
+              <span class="badge badge--time">
+                <i class="fa-regular fa-clock" aria-hidden="true"></i> 25 min
+              </span>
+              <span class="badge badge--diff facile">Facile</span>
+            </div>
+            <h2 class="recipe-card-title">
+              <a href="#">Spaghetti all'Amatriciana</a>
+            </h2>
+            <p class="recipe-card-subtitle">La Ricetta Tradizionale</p>
+            <p class="recipe-card-desc">
+              Guanciale croccante, pomodoro San Marzano, peperoncino
+              e pecorino romano. Solo così, senza deroghe, come vuole
+              la tradizione laziale.
+            </p>
+            <a href="#" class="recipe-card-link">
+              Vedi la ricetta
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </article>
+
+          <!-- Ricetta 6 -->
+          <article class="recipe-card animate-on-scroll" style="--delay:0.3s">
+            <div class="recipe-card-meta">
+              <span class="badge badge--time">
+                <i class="fa-regular fa-clock" aria-hidden="true"></i> 1 h 20 min
+              </span>
+              <span class="badge badge--diff media">Media</span>
+            </div>
+            <h2 class="recipe-card-title">
+              <a href="#">Minestrone di Verdure</a>
+            </h2>
+            <p class="recipe-card-subtitle">Quattro Stagioni nel Piatto</p>
+            <p class="recipe-card-desc">
+              Verdure di stagione, legumi, patate e un filo d'olio extravergine
+              a crudo. Il minestrone di nonna cambia con le stagioni
+              ma non perde mai il suo sapore di casa.
+            </p>
+            <a href="#" class="recipe-card-link">
+              Vedi la ricetta
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </article>
+
+        </div>
+        <!-- Fine recipe-grid -->
+
+        <!-- ── Esempio di categoria VUOTA (decommentare per vedere lo stile) ──
+        <div class="recipe-grid">
+          <div class="empty-state animate-on-scroll">
+            <i class="fa-regular fa-hourglass-half empty-icon" aria-hidden="true"></i>
+            <h3>Ricette in arrivo!</h3>
+            <p>
+              Nonna Luisa sta raccogliendo le sue migliori ricette per questa
+              sezione. Torna presto a trovarci!
+            </p>
+          </div>
+        </div>
+        ── -->
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer (iniettato da JS) -->
+  <div id="footer"></div>
+
+  <!-- Script principale -->
+  <script src="js/main.js"></script>
+</body>
+</html>
