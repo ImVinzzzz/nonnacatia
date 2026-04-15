@@ -15,7 +15,7 @@ const CATEGORIES = [
     img: '../img_home/antipasti.jpg'
   },
   {
-    id: 'primi',
+    id: 'rp_0_primi',
     name: 'Primi',
     icon: 'fa-solid fa-bowl-food',
     active: true,
