@@ -479,23 +479,11 @@ button { font-family: inherit; }
 .cat-card:not(.cat-card--inactive):hover .cat-card-name { color: #fff; }
 .cat-card:not(.cat-card--inactive):hover .cat-card-cta  { color: #fff; opacity: 1; transform: none; }
 
-/* .cat-card::after {
-  content: '';
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--bordeaux), var(--terracotta));
-  transform: scaleX(0);
-  transform-origin: left center;
-  transition: transform var(--transition);
-} */
-
 .cat-card:hover {
   transform: translateY(-8px);
   box-shadow: var(--shadow-lg);
   border-color: var(--border);
 }
-/* .cat-card:hover::after { transform: scaleX(1); } */
 
 /* Inattiva */
 .cat-card--inactive {
@@ -542,7 +530,6 @@ button { font-family: inherit; }
 }
 .cat-card:not(.cat-card--inactive):hover .cat-card-icon {
   transform: scale(1.12) rotate(-5deg);
-  color: var(--terracotta);
 }
 
 .cat-card-name {
