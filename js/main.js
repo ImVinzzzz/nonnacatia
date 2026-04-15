@@ -12,7 +12,7 @@ const CATEGORIES = [
     icon: 'fa-solid fa-cheese',
     active: false,
     count: 0,
-    img: 'img_home/antipasti.jpg'
+    img: '../img_home/antipasti.jpg'
   },
   {
     id: 'primi',
@@ -20,7 +20,7 @@ const CATEGORIES = [
     icon: 'fa-solid fa-bowl-food',
     active: true,
     count: 1,
-    img: 'img_home/primi.jpg'
+    img: '../img_home/primi.jpg'
   },
   {
     id: 'secondi',
@@ -28,7 +28,7 @@ const CATEGORIES = [
     icon: 'fa-solid fa-drumstick-bite',
     active: false,
     count: 0,
-    img: 'img_home/secondi.jpg'
+    img: '../img_home/secondi.jpg'
   },
   {
     id: 'dolci',
@@ -36,7 +36,7 @@ const CATEGORIES = [
     icon: 'fa-solid fa-stroopwafel',
     active: true,
     count: 11,
-    img: 'img_home/dolci.jpg'
+    img: '../img_home/dolci.jpg'
   },
   {
     id: 'conserve',
@@ -44,7 +44,7 @@ const CATEGORIES = [
     icon: 'fa-solid fa-jar',
     active: false,
     count: 0,
-    img: 'img_home/conserve.jpg'
+    img: '../img_home/conserve.jpg'
   },
    {
     id: 'speciali',
@@ -52,7 +52,7 @@ const CATEGORIES = [
     icon: 'fa-solid fa-star',
     active: false,
     count: 0,
-    img: 'img_home/occasioni.jpg'
+    img: '../img_home/occasioni.jpg'
   },
   {
     id: 'pizza-focacce',
@@ -60,7 +60,7 @@ const CATEGORIES = [
     icon: 'fa-solid fa-pizza-slice',
     active: false,
     count: 0,
-    img: 'img_home/pizza.jpg'
+    img: '../img_home/pizza.jpg'
   }
 ];
 
