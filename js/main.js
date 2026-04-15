@@ -23,7 +23,7 @@ const CATEGORIES = [
     img: '../img_home/primi.jpg'
   },
   {
-    id: 'secondi',
+    id: 'rs_0_secondi',
     name: 'Secondi',
     icon: 'fa-solid fa-drumstick-bite',
     active: false,
@@ -31,7 +31,7 @@ const CATEGORIES = [
     img: '../img_home/secondi.jpg'
   },
   {
-    id: 'dolci',
+    id: 'rd_0_dolci',
     name: 'Dolci',
     icon: 'fa-solid fa-stroopwafel',
     active: true,
@@ -39,7 +39,7 @@ const CATEGORIES = [
     img: '../img_home/dolci.jpg'
   },
   {
-    id: 'conserve',
+    id: 'rc_0_conserve',
     name: 'Conserve e Marmellate',
     icon: 'fa-solid fa-jar',
     active: false,
@@ -47,7 +47,7 @@ const CATEGORIES = [
     img: '../img_home/conserve.jpg'
   },
    {
-    id: 'occasioni',
+    id: 'ro_0_occasioni',
     name: 'Occasioni Speciali',
     icon: 'fa-solid fa-star',
     active: true,
@@ -55,7 +55,7 @@ const CATEGORIES = [
     img: '../img_home/occasioni.jpg'
   },
   {
-    id: 'pizza-focacce',
+    id: 'rz_0_pizza-focacce',
     name: 'Pizza e Focacce',
     icon: 'fa-solid fa-pizza-slice',
     active: false,
