@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Pizza di Pasqua Abruzzese — Il dolce lievitato della tradizione pasquale, profumato di agrumi, cannella e liquori. Le Ricette di Nonna Luisa." />
+
+  <title>Pizza di Pasqua Abruzzese — Le Ricette di Nonna Luisa</title>
+
+  <!-- Font Awesome Free -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Foglio di stile -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Navbar (iniettata da JS) -->
+  <div id="navbar"></div>
+
+  <main>
+
+    <!-- ── INTESTAZIONE RICETTA ──────────────────────────── -->
+    <header class="recipe-page-header">
+      <div class="container">
+        <div class="recipe-header-inner">
+
+          <!-- Colonna testo -->
+          <div class="recipe-header-text">
+
+            <nav class="breadcrumb" aria-label="Posizione nella gerarchia">
+              <a href="index.html">
+                <i class="fa-solid fa-house" aria-hidden="true"></i> Home
+              </a>
+              <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+              <a href="dolci.html">Dolci</a>
+              <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+              <span>Pizza di Pasqua Abruzzese</span>
+            </nav>
+
+            <div class="recipe-header-meta" style="margin-top:1.25rem;">
+              <span class="badge badge--cat">
+                <i class="fa-solid fa-cake-candles" aria-hidden="true"></i> Dolci
+              </span>
+              <span class="badge badge--time">
+                <i class="fa-regular fa-clock" aria-hidden="true"></i> 4–5 h (con lievitazione)
+              </span>
+              <span class="badge badge--diff media">
+                <i class="fa-solid fa-gauge-simple-high" aria-hidden="true"></i> Media
+              </span>
+            </div>
+
+            <h1 class="recipe-title">Pizza di Pasqua<br>Abruzzese</h1>
+            <em class="recipe-title-script">Il Profumo della Settimana Santa</em>
+
+            <p class="recipe-intro">
+              La pizza di Pasqua abruzzese non è una pizza e non è una torta:
+              è qualcosa di unico — un pane dolce lievitato, soffice dentro
+              e dorato fuori, profumato di agrumi, cannella, maraschino e rum.
+              Si prepara il Giovedì o il Venerdì Santo, si mangia a colazione
+              la mattina di Pasqua. In ogni casa abruzzese il profumo che esce
+              dal forno è lo stesso da generazioni.
+            </p>
+
+          </div>
+
+          <!-- Colonna immagine (placeholder finché non c'è la foto) -->
+          <div class="recipe-header-image recipe-header-image--placeholder">
+            <i class="fa-regular fa-image" aria-hidden="true"></i>
+            <span>Foto in arrivo</span>
+          </div>
+          <!--
+          <div class="recipe-header-image">
+            <img src="img_ricette/rd_3_pizza-pasqua.webp"
+                 alt="Pizza di Pasqua Abruzzese"
+                 loading="lazy" />
+          </div>
+          -->
+
+        </div>
+      </div>
+    </header>
+
+    <!-- ── LAYOUT A DUE COLONNE ──────────────────────────── -->
+    <div class="container">
+      <div class="recipe-layout">
+
+        <!-- ═══════════════════════════════════════════════ -->
+        <!-- COLONNA SINISTRA (1/3) — Sidebar               -->
+        <!-- ═══════════════════════════════════════════════ -->
+        <aside class="recipe-sidebar" aria-label="Informazioni e ingredienti">
+
+          <!-- Card info -->
+          <div class="sidebar-card">
+            <div class="sidebar-card-header">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              Informazioni
+            </div>
+            <div class="sidebar-card-body">
+              <div class="cooking-info-list">
+                <div class="info-item">
+                  <i class="fa-regular fa-clock" aria-hidden="true"></i>
+                  <span class="info-label">Preparazione</span>
+                  <span class="info-value">40 min</span>
+                </div>
+                <div class="info-item">
+                  <i class="fa-solid fa-arrow-up-wide-short" aria-hidden="true"></i>
+                  <span class="info-label">Lievitazione</span>
+                  <span class="info-value">3–4 h</span>
+                </div>
+                <div class="info-item">
+                  <i class="fa-solid fa-fire-burner" aria-hidden="true"></i>
+                  <span class="info-label">Cottura</span>
+                  <span class="info-value">40 min a 170°</span>
+                </div>
+                <div class="info-item">
+                  <i class="fa-solid fa-weight-hanging" aria-hidden="true"></i>
+                  <span class="info-label">Resa</span>
+                  <span class="info-value">~2 panetti da 1,2 kg</span>
+                </div>
+                <div class="info-item">
+                  <i class="fa-solid fa-gauge-simple-high" aria-hidden="true"></i>
+                  <span class="info-label">Difficoltà</span>
+                  <span class="info-value">Media</span>
+                </div>
+                <div class="info-item">
+                  <i class="fa-solid fa-church" aria-hidden="true"></i>
+                  <span class="info-label">Occasione</span>
+                  <span class="info-value">Pasqua</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card ingredienti -->
+          <div class="sidebar-card">
+            <div class="sidebar-card-header">
+              <i class="fa-solid fa-list" aria-hidden="true"></i>
+              Ingredienti
+              <button id="resetChecklist"
+                      title="Deseleziona tutto"
+                      aria-label="Deseleziona tutti gli ingredienti"
+                      style="
+                        margin-left:auto;
+                        background:rgba(255,255,255,0.2);
+                        border:1px solid rgba(255,255,255,0.3);
+                        border-radius:6px;
+                        color:white;
+                        font-size:0.7rem;
+                        padding:0.2em 0.6em;
+                        cursor:pointer;
+                      ">
+                <i class="fa-solid fa-rotate-left" aria-hidden="true"></i> Reset
+              </button>
+            </div>
+            <div class="sidebar-card-body">
+
+              <p style="font-size:0.75rem; color:var(--ink-muted); font-style:italic; margin-bottom:0.75rem;">
+                <i class="fa-regular fa-hand-pointer" aria-hidden="true"></i>
+                Clicca per spuntare gli ingredienti
+              </p>
+
+              <div class="ingredient-list" role="list">
+
+                <p class="ingredient-section-label">Liquidi e grassi</p>
+
+                <div class="ingredient-item" role="listitem" data-ingredient="pp1"
+                     tabindex="0">
+                  <span class="ingredient-check" aria-hidden="true"></span>
+                  <span class="ingredient-qty">5</span>
+                  <span class="ingredient-name">Uova fresche (a temperatura ambiente)</span>
+                </div>
+                <div class="ingredient-item" role="listitem" data-ingredient="pp2"
+                     tabindex="0">
+                  <span class="ingredient-check" aria-hidden="true"></span>
+                  <span class="ingredient-qty">170 ml</span>
+                  <span class="ingredient-name">Latte intero tiepido</span>
+                </div>
+                <div class="ingredient-item" role="listitem" data-ingredient="pp3"
+                     tabindex="0">
+                  <span class="ingredient-check" aria-hidden="true"></span>
+                  <span class="ingredient-qty">170 ml</span>
+                  <span class="ingredient-name">Olio di semi (oppure 170 g di margarina sciolta)</span>
+                </div>
+
+                <p class="ingredient-section-label">Zucchero e lievito</p>
+
+                <div class="ingredient-item" role="listitem" data-ingredient="pp4"
+                     tabindex="0">
+                  <span class="ingredient-check" aria-hidden="true"></span>
+                  <span class="ingredient-qty">250 g</span>
+                  <span class="ingredient-name">Zucchero semolato</span>
+                </div>
+                <div class="ingredient-item" role="listitem" data-ingredient="pp5"
+                     tabindex="0">
+                  <span class="ingredient-check" aria-hidden="true"></span>
+                  <span class="ingredient-qty">½ cubetto</span>
+                  <span class="ingredient-name">Lievito di birra fresco (circa 12–13 g)</span>
+                </div>
+
+                <p class="ingredient-section-label">Aromi e liquori</p>
+
+                <div class="ingredient-item" role="listitem" data-ingredient="pp6"
+                     tabindex="0">
+                  <span class="ingredient-check" aria-hidden="true"></span>
+                  <span class="ingredient-qty">q.b.</span>
+                  <span class="ingredient-name">Cannella in polvere</span>
+                </div>
+                <div class="ingredient-item" role="listitem" data-ingredient="pp7"
+                     tabindex="0">
+                  <span class="ingredient-check" aria-hidden="true"></span>
+                  <span class="ingredient-qty">1</span>
+                  <span class="ingredient-name">Limone — buccia grattugiata</span>
+                </div>
+                <div class="ingredient-item" role="listitem" data-ingredient="pp8"
+                     tabindex="0">
+                  <span class="ingredient-check" aria-hidden="true"></span>
+                  <span class="ingredient-qty">2</span>
+                  <span class="ingredient-name">Arance — buccia grattugiata + succo</span>
+                </div>
+                <div class="ingredient-item" role="listitem" data-ingredient="pp9"
+                     tabindex="0">
+                  <span class="ingredient-check" aria-hidden="true"></span>
+                  <span class="ingredient-qty">q.b.</span>
+                  <span class="ingredient-name">Maraschino</span>
+                </div>
+                <div class="ingredient-item" role="listitem" data-ingredient="pp10"
+                     tabindex="0">
+                  <span class="ingredient-check" aria-hidden="true"></span>
+                  <span class="ingredient-qty">q.b.</span>
+                  <span class="ingredient-name">Rum</span>
+                </div>
+
+                <p class="ingredient-section-label">Farina</p>
+
+                <div class="ingredient-item" role="listitem" data-ingredient="pp11"
+                     tabindex="0">
+                  <span class="ingredient-check" aria-hidden="true"></span>
+                  <span class="ingredient-qty">~1,5 kg</span>
+                  <span class="ingredient-name">Farina 00</span>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Card note della nonna -->
+          <div class="sidebar-card">
+            <div class="sidebar-card-header">
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              I Segreti di Nonna
+            </div>
+            <div class="sidebar-card-body">
+              <div class="notes-text">
+                <p>
+                  <strong style="color:var(--bordeaux)">Il latte deve essere
+                  tiepido</strong>, non caldo: il calore eccessivo uccide
+                  il lievito. Punta a circa 35–38°C — se ci immergi un dito
+                  deve essere appena percettibile al tatto.
+                </p>
+                <p>
+                  La farina va aggiunta <em>gradualmente</em>: l'impasto
+                  deve essere morbido, elastico e leggermente appiccicoso.
+                  Non indurirti ad aggiungerne altra: una pizza di Pasqua
+                  con troppa farina viene secca.
+                </p>
+                <p>
+                  <strong style="color:var(--bordeaux)">I liquori non sono
+                  decorativi</strong>: maraschino e rum danno all'impasto
+                  profondità e conservano la morbidezza nei giorni successivi.
+                  Non lesinare.
+                </p>
+                <p>
+                  La lievitazione è pronta quando l'impasto ha
+                  <em>raddoppiato il volume</em>. In casa calda bastano
+                  3 ore, in casa fredda anche 5. Non affrettarla.
+                </p>
+                <p>
+                  <strong style="color:var(--bordeaux)">Non aprire il forno</strong>
+                  durante i primi 30 minuti di cottura: il dolce
+                  potrebbe afflosciarsi.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </aside>
+
+        <!-- ═══════════════════════════════════════════════ -->
+        <!-- COLONNA DESTRA (2/3) — Preparazione            -->
+        <!-- ═══════════════════════════════════════════════ -->
+        <article class="recipe-preparation" aria-label="Preparazione della ricetta">
+
+          <p class="prep-intro">
+            La pizza di Pasqua è un lievitato ricco che richiede tempo
+            ma non tecnica sopraffina. Il segreto sta nella pazienza:
+            ogni passaggio — dall'attivazione del lievito alla lievitazione
+            finale — non va affrettato. Preparala il giorno prima di Pasqua
+            e la mattina troverai tutta la casa profumata.
+          </p>
+
+          <!-- ── Sezione 1: Il Lievito ── -->
+          <section class="prep-section" aria-labelledby="pp-section1">
+            <h2 class="prep-section-title" id="pp-section1">
+              <span class="step-badge" aria-hidden="true">1</span>
+              Attivare il Lievito
+            </h2>
+            <div class="prep-steps">
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 1">1</span>
+                <p class="step-text">
+                  Scalda il latte fino a renderlo <strong>tiepido</strong>
+                  (circa 35–38°C). Sbriciola il <strong>mezzo cubetto di
+                  lievito di birra</strong> nel latte tiepido, aggiungi
+                  un cucchiaino di zucchero (preso dai 250 g) e mescola
+                  fino a scioglimento completo. Lascia riposare
+                  <em>10 minuti</em> in un posto caldo: si formerà
+                  una schiuma in superficie, segno che il lievito
+                  è attivo e pronto.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- ── Sezione 2: Il Composto Liquido ── -->
+          <section class="prep-section" aria-labelledby="pp-section2">
+            <h2 class="prep-section-title" id="pp-section2">
+              <span class="step-badge" aria-hidden="true">2</span>
+              Il Composto Liquido
+            </h2>
+            <div class="prep-steps">
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 2">2</span>
+                <p class="step-text">
+                  In una ciotola molto capiente — o direttamente sulla
+                  spianatoia — sbatti le <strong>5 uova</strong> con il
+                  restante <strong>zucchero</strong> fino a ottenere
+                  un composto chiaro e leggermente spumoso.
+                </p>
+              </div>
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 3">3</span>
+                <p class="step-text">
+                  Aggiungi l'<strong>olio di semi</strong> (o la margarina
+                  sciolta e raffreddata) e mescola bene. Unisci poi il
+                  <strong>succo delle due arance</strong>, la
+                  <strong>buccia grattugiata</strong> di entrambe le arance
+                  e del limone, la <strong>cannella</strong> a piacere,
+                  un goccio generoso di <strong>maraschino</strong> e uno
+                  di <strong>rum</strong>. Mescola fino ad avere
+                  un liquido aromatico e omogeneo.
+                </p>
+              </div>
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 4">4</span>
+                <p class="step-text">
+                  Versa il <strong>latte con il lievito attivato</strong>
+                  nel composto di uova e mescola bene per amalgamare
+                  tutti i liquidi.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- ── Sezione 3: L'Impasto ── -->
+          <section class="prep-section" aria-labelledby="pp-section3">
+            <h2 class="prep-section-title" id="pp-section3">
+              <span class="step-badge" aria-hidden="true">3</span>
+              L'Impasto
+            </h2>
+            <div class="prep-steps">
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 5">5</span>
+                <p class="step-text">
+                  Incorpora la <strong>farina poco alla volta</strong>,
+                  mescolando prima con un cucchiaio e poi lavorando
+                  a mano. Aggiungi farina finché l'impasto non risulta
+                  <em>morbido, elastico e leggermente appiccicoso</em>,
+                  ma che si stacca dalle mani con facilità.
+                  Indicativamente serviranno circa 1,5 kg, ma lasciati
+                  guidare dalla consistenza: ogni farina assorbe in modo
+                  diverso.
+                </p>
+              </div>
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 6">6</span>
+                <p class="step-text">
+                  Lavora l'impasto energicamente per almeno
+                  <strong>10 minuti</strong>: spingi con il palmo,
+                  piega, ruota di 90°, ripeti. L'impasto è pronto
+                  quando è <em>liscio, omogeneo e torna indietro</em>
+                  se lo schiacci con un dito — segno che il glutine
+                  si è sviluppato correttamente.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- ── Sezione 4: La Lievitazione ── -->
+          <section class="prep-section" aria-labelledby="pp-section4">
+            <h2 class="prep-section-title" id="pp-section4">
+              <span class="step-badge" aria-hidden="true">4</span>
+              La Lievitazione
+            </h2>
+            <div class="prep-steps">
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 7">7</span>
+                <p class="step-text">
+                  Dividi l'impasto in <strong>due panetti</strong> da circa
+                  1,2 kg ciascuno e sistemali negli stampi da plumcake
+                  o negli appositi stampi cilindrici alti, ben imburrati
+                  e infarinati. L'impasto deve riempire gli stampi
+                  <em>per circa metà</em>: il resto del volume lo
+                  guadagna lievitando.
+                </p>
+              </div>
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 8">8</span>
+                <p class="step-text">
+                  Copri gli stampi con un canovaccio pulito e mettili
+                  in un posto caldo e lontano da correnti d'aria —
+                  dentro il forno spento con la luce accesa è ideale.
+                  Lascia lievitare per <strong>3–4 ore</strong>, fino
+                  a quando l'impasto non ha <em>raddoppiato di volume</em>
+                  e raggiunge quasi il bordo dello stampo.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- ── Sezione 5: Cottura ── -->
+          <section class="prep-section" aria-labelledby="pp-section5">
+            <h2 class="prep-section-title" id="pp-section5">
+              <span class="step-badge" aria-hidden="true">5</span>
+              Cottura e Raffreddamento
+            </h2>
+            <div class="prep-steps">
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 9">9</span>
+                <p class="step-text">
+                  Preriscalda il forno a <strong>170°C</strong> — statico,
+                  non ventilato: il ventilato asciuga troppo la superficie.
+                  Inforna i due panetti nella parte centrale del forno
+                  e cuoci per <strong>40 minuti</strong>. Non aprire
+                  il forno per i primi 30 minuti: il rischio di
+                  afflosciamento è reale.
+                </p>
+              </div>
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 10">10</span>
+                <p class="step-text">
+                  Dopo 40 minuti verifica la cottura infilando uno
+                  <em>stecchino di legno</em> nel centro: deve uscire
+                  asciutto. Se la superficie dovesse colorirsi troppo
+                  prima che il centro sia cotto, coprila con un foglio
+                  di alluminio. La pizza è pronta quando è
+                  <strong>dorata in modo uniforme</strong> e profumata.
+                </p>
+              </div>
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 11">11</span>
+                <p class="step-text">
+                  Sforna e lascia raffreddare <strong>10 minuti</strong>
+                  nello stampo, poi estrai delicatamente e fai raffreddare
+                  su una griglia. Non tagliare finché non è completamente
+                  fredda: la mollica ha bisogno di assestarsi.
+                  Si conserva avvolta in pellicola per
+                  <em>4–5 giorni</em>, e il secondo giorno
+                  è ancora più buona.
+                </p>
+              </div>
+            </div>
+          </section>
+
+        </article>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer (iniettato da JS) -->
+  <div id="footer"></div>
+
+  <!-- Script principale -->
+  <script src="js/main.js"></script>
+
+  <script>
+    document.querySelectorAll('.ingredient-item[tabindex]').forEach(item => {
+      item.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          item.click();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
