@@ -429,7 +429,57 @@ button { font-family: inherit; }
   transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
   overflow: hidden;
 }
+
+/* Immagine di sfondo su hover — pseudo-elemento */
+.cat-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-lg);
+  background-image: var(--card-bg, none);
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity var(--transition);
+  z-index: 0;
+}
+/* Overlay scuro sopra l'immagine per leggibilità */
 .cat-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(
+    to bottom,
+    rgba(45,31,14,0.35) 0%,
+    rgba(45,31,14,0.6) 100%
+  );
+  opacity: 0;
+  transition: opacity var(--transition);
+  z-index: 1;
+  /* Sovrascrive il ::after già esistente (era la barra bordeaux in fondo) */
+  height: 100%;
+  transform: none;
+  transform-origin: unset;
+  background-color: transparent;
+}
+
+/* Tutti i figli salgono sopra gli pseudo-elementi */
+.cat-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* On hover: mostra immagine e overlay */
+.cat-card:not(.cat-card--inactive):hover::before { opacity: 1; }
+.cat-card:not(.cat-card--inactive):hover::after  { opacity: 1; }
+
+/* Testi e icona diventano bianchi sull'immagine */
+.cat-card:not(.cat-card--inactive):hover .cat-card-icon { color: #fff; }
+.cat-card:not(.cat-card--inactive):hover .cat-card-name { color: #fff; }
+.cat-card:not(.cat-card--inactive):hover .cat-card-cta  { color: #fff; opacity: 1; transform: none; }
+
+/* .cat-card::after {
   content: '';
   position: absolute;
   bottom: 0; left: 0; right: 0;
@@ -438,7 +488,8 @@ button { font-family: inherit; }
   transform: scaleX(0);
   transform-origin: left center;
   transition: transform var(--transition);
-}
+} */
+
 .cat-card:hover {
   transform: translateY(-8px);
   box-shadow: var(--shadow-lg);
