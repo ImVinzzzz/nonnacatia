@@ -11,56 +11,56 @@ const CATEGORIES = [
     name: 'Antipasti',
     icon: 'fa-solid fa-cheese',
     active: false,
-    count: 0
+    count: 0,
+    img: 'img_home/antipasti.jpg'
   },
   {
     id: 'primi',
     name: 'Primi Piatti',
     icon: 'fa-solid fa-bowl-food',
     active: true,
-    count: 1
+    count: 1,
+    img: 'img_home/primi.jpg'
   },
   {
     id: 'secondi',
     name: 'Secondi Piatti',
     icon: 'fa-solid fa-drumstick-bite',
     active: false,
-    count: 0
+    count: 0,
+    img: 'img_home/secondi.jpg'
   },
   {
     id: 'dolci',
     name: 'Dolci',
     icon: 'fa-solid fa-stroopwafel',
     active: true,
-    count: 11
+    count: 11,
+    img: 'img_home/dolci.jpg'
   },
   {
     id: 'conserve',
     name: 'Conserve e Marmellate',
     icon: 'fa-solid fa-jar',
     active: false,
-    count: 0
+    count: 0,
+    img: 'img_home/conserve.jpg'
   },
    {
     id: 'speciali',
     name: 'Occasioni Speciali',
     icon: 'fa-solid fa-star',
     active: false,
-    count: 0
-  },
-  {
-    id: 'piatti-unici',
-    name: 'Piatti Unici',
-    icon: 'fa-solid fa-fire-burner',
-    active: false,
-    count: 0
+    count: 0,
+    img: 'img_home/occasioni.jpg'
   },
   {
     id: 'pizza-focacce',
     name: 'Pizza e Focacce',
     icon: 'fa-solid fa-pizza-slice',
     active: false,
-    count: 0
+    count: 0,
+    img: 'img_home/pizza.jpg'
   }
 ];
 
