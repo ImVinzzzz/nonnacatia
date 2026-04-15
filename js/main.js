@@ -243,7 +243,7 @@ function initCategoryGrid() {
     const isActive = cat.active;
     return `
       <article class="cat-card${!isActive ? ' cat-card--inactive' : ''} animate-on-scroll"
-               style="--delay: ${i * 0.08}s"
+         style="--delay: ${i * 0.08}s${cat.img ? `; --card-bg: url('${cat.img}')` : ''}"
                role="${isActive ? 'button' : 'article'}"
                ${isActive ? `tabindex="0" onclick="location.href='${cat.id}.html'"` : ''}
                aria-label="${cat.name}${!isActive ? ' — prossimamente' : ''}">
