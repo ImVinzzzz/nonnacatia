@@ -6,14 +6,14 @@
 
 // ── Dati del sito ──────────────────────────────────────────────────────────────
 const CATEGORIES = [
-  {
+  /* {
     id: 'antipasti',
     name: 'Antipasti',
     icon: 'fa-solid fa-cheese',
     active: false,
     count: 0,
     img: '../img_home/antipasti.jpg'
-  },
+  },  */
   {
     id: 'rp_0_primi',
     name: 'Primi',
@@ -22,14 +22,14 @@ const CATEGORIES = [
     count: 1,
     img: '../img_home/primi.jpg'
   },
-  {
+  /* {
     id: 'rs_0_secondi',
     name: 'Secondi',
     icon: 'fa-solid fa-drumstick-bite',
     active: false,
     count: 0,
     img: '../img_home/secondi.jpg'
-  },
+  }, */
   {
     id: 'rd_0_dolci',
     name: 'Dolci',
@@ -38,14 +38,14 @@ const CATEGORIES = [
     count: 11,
     img: '../img_home/dolci.jpg'
   },
-  {
+ /* {
     id: 'rc_0_conserve',
     name: 'Conserve e Marmellate',
     icon: 'fa-solid fa-jar',
     active: false,
     count: 0,
     img: '../img_home/conserve.jpg'
-  },
+  }, */
    {
     id: 'ro_0_occasioni',
     name: 'Occasioni Speciali',
