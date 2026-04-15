@@ -47,7 +47,7 @@ const CATEGORIES = [
     img: '../img_home/conserve.jpg'
   },
    {
-    id: 'speciali',
+    id: 'occasioni',
     name: 'Occasioni Speciali',
     icon: 'fa-solid fa-star',
     active: true,
