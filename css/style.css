@@ -495,7 +495,7 @@ button { font-family: inherit; }
   box-shadow: var(--shadow-lg);
   border-color: var(--border);
 }
-.cat-card:hover::after { transform: scaleX(1); }
+/* .cat-card:hover::after { transform: scaleX(1); } */
 
 /* Inattiva */
 .cat-card--inactive {
