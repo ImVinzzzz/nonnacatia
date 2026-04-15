@@ -16,7 +16,7 @@ const CATEGORIES = [
   },
   {
     id: 'primi',
-    name: 'Primi Piatti',
+    name: 'Primi',
     icon: 'fa-solid fa-bowl-food',
     active: true,
     count: 1,
@@ -24,7 +24,7 @@ const CATEGORIES = [
   },
   {
     id: 'secondi',
-    name: 'Secondi Piatti',
+    name: 'Secondi',
     icon: 'fa-solid fa-drumstick-bite',
     active: false,
     count: 0,
