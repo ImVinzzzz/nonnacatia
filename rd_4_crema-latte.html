@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Crema al Latte — Panna montata, latte condensato e miele per una farcitura soffice e golosa. Le Ricette di Nonna Luisa." />
+
+  <title>Crema al Latte — Le Ricette di Nonna Luisa</title>
+
+  <!-- Font Awesome Free -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Foglio di stile -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Navbar (iniettata da JS) -->
+  <div id="navbar"></div>
+
+  <main>
+
+    <!-- ── INTESTAZIONE RICETTA ──────────────────────────── -->
+    <header class="recipe-page-header">
+      <div class="container">
+        <div class="recipe-header-inner">
+
+          <!-- Colonna testo -->
+          <div class="recipe-header-text">
+
+            <nav class="breadcrumb" aria-label="Posizione nella gerarchia">
+              <a href="index.html">
+                <i class="fa-solid fa-house" aria-hidden="true"></i> Home
+              </a>
+              <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+              <a href="dolci.html">Dolci</a>
+              <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+              <span>Crema al Latte</span>
+            </nav>
+
+            <div class="recipe-header-meta" style="margin-top:1.25rem;">
+              <span class="badge badge--cat">
+                <i class="fa-solid fa-cake-candles" aria-hidden="true"></i> Dolci
+              </span>
+              <span class="badge badge--time">
+                <i class="fa-regular fa-clock" aria-hidden="true"></i> 10 min
+              </span>
+              <span class="badge badge--diff facile">
+                <i class="fa-solid fa-gauge-simple-high" aria-hidden="true"></i> Facilissima
+              </span>
+            </div>
+
+            <h1 class="recipe-title">Crema<br>al Latte</h1>
+            <em class="recipe-title-script">La Farcitura Soffice per i Dolci di Casa</em>
+
+            <p class="recipe-intro">
+              Tre ingredienti, dieci minuti, un risultato che conquista.
+              Questa crema al latte è soffice, vellutata e dolce al punto
+              giusto grazie al miele: perfetta per farcire la Torta Paradiso,
+              ma anche per accompagnare crostate, pan di spagna e qualsiasi
+              dolce abbia bisogno di una farcitura leggera e profumata.
+              Il segreto è uno solo: tutto deve essere <em>molto freddo</em>.
+            </p>
+
+          </div>
+
+          <!-- Colonna immagine (placeholder) -->
+          <div class="recipe-header-image recipe-header-image--placeholder">
+            <i class="fa-regular fa-image" aria-hidden="true"></i>
+            <span>Foto in arrivo</span>
+          </div>
+          <!--
+          <div class="recipe-header-image">
+            <img src="img_ricette/rd_4_crema-latte.webp"
+                 alt="Crema al Latte"
+                 loading="lazy" />
+          </div>
+          -->
+
+        </div>
+      </div>
+    </header>
+
+    <!-- ── LAYOUT A DUE COLONNE ──────────────────────────── -->
+    <div class="container">
+      <div class="recipe-layout">
+
+        <!-- ═══════════════════════════════════════════════ -->
+        <!-- COLONNA SINISTRA (1/3) — Sidebar               -->
+        <!-- ═══════════════════════════════════════════════ -->
+        <aside class="recipe-sidebar" aria-label="Informazioni e ingredienti">
+
+          <!-- Card info -->
+          <div class="sidebar-card">
+            <div class="sidebar-card-header">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              Informazioni
+            </div>
+            <div class="sidebar-card-body">
+              <div class="cooking-info-list">
+                <div class="info-item">
+                  <i class="fa-regular fa-clock" aria-hidden="true"></i>
+                  <span class="info-label">Preparazione</span>
+                  <span class="info-value">10 min</span>
+                </div>
+                <div class="info-item">
+                  <i class="fa-solid fa-fire-burner" aria-hidden="true"></i>
+                  <span class="info-label">Cottura</span>
+                  <span class="info-value">Nessuna</span>
+                </div>
+                <div class="info-item">
+                  <i class="fa-solid fa-fill-drip" aria-hidden="true"></i>
+                  <span class="info-label">Resa</span>
+                  <span class="info-value">~400 ml di crema</span>
+                </div>
+                <div class="info-item">
+                  <i class="fa-solid fa-gauge-simple-high" aria-hidden="true"></i>
+                  <span class="info-label">Difficoltà</span>
+                  <span class="info-value">Facilissima</span>
+                </div>
+                <div class="info-item">
+                  <i class="fa-solid fa-snowflake" aria-hidden="true"></i>
+                  <span class="info-label">Si conserva</span>
+                  <span class="info-value">24–48 h in frigo</span>
+                </div>
+                <div class="info-item">
+                  <i class="fa-solid fa-link" aria-hidden="true"></i>
+                  <span class="info-label">Usata in</span>
+                  <span class="info-value">
+                    <a href="rd_3_torta-paradiso.html"
+                       style="color:var(--bordeaux); text-decoration:underline;">
+                      Torta Paradiso
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card ingredienti -->
+          <div class="sidebar-card">
+            <div class="sidebar-card-header">
+              <i class="fa-solid fa-list" aria-hidden="true"></i>
+              Ingredienti
+              <button id="resetChecklist"
+                      title="Deseleziona tutto"
+                      aria-label="Deseleziona tutti gli ingredienti"
+                      style="
+                        margin-left:auto;
+                        background:rgba(255,255,255,0.2);
+                        border:1px solid rgba(255,255,255,0.3);
+                        border-radius:6px;
+                        color:white;
+                        font-size:0.7rem;
+                        padding:0.2em 0.6em;
+                        cursor:pointer;
+                      ">
+                <i class="fa-solid fa-rotate-left" aria-hidden="true"></i> Reset
+              </button>
+            </div>
+            <div class="sidebar-card-body">
+
+              <p style="font-size:0.75rem; color:var(--ink-muted); font-style:italic; margin-bottom:0.75rem;">
+                <i class="fa-regular fa-hand-pointer" aria-hidden="true"></i>
+                Clicca per spuntare gli ingredienti
+              </p>
+
+              <div class="ingredient-list" role="list">
+
+                <p class="ingredient-section-label">Ingredienti</p>
+
+                <div class="ingredient-item" role="listitem" data-ingredient="cl1" tabindex="0">
+                  <span class="ingredient-check" aria-hidden="true"></span>
+                  <span class="ingredient-qty">200 g</span>
+                  <span class="ingredient-name">Panna da montare fresca (ben fredda)</span>
+                </div>
+                <div class="ingredient-item" role="listitem" data-ingredient="cl2" tabindex="0">
+                  <span class="ingredient-check" aria-hidden="true"></span>
+                  <span class="ingredient-qty">60 g</span>
+                  <span class="ingredient-name">Latte condensato (freddo)</span>
+                </div>
+                <div class="ingredient-item" role="listitem" data-ingredient="cl3" tabindex="0">
+                  <span class="ingredient-check" aria-hidden="true"></span>
+                  <span class="ingredient-qty">1 cucchiaio</span>
+                  <span class="ingredient-name">Miele millefiori o acacia (colmo)</span>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Card abbinamenti -->
+          <div class="sidebar-card">
+            <div class="sidebar-card-header">
+              <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+              Abbinamenti Consigliati
+            </div>
+            <div class="sidebar-card-body">
+              <div class="notes-text">
+                <p>
+                  Questa crema è la farcitura ideale della
+                  <a href="rd_3_torta-paradiso.html"
+                     style="color:var(--bordeaux); font-style:normal; text-decoration:underline;">
+                    Torta Paradiso di Stefania
+                  </a>,
+                  ma si presta a moltissimi altri usi:
+                </p>
+                <p>
+                  <strong style="color:var(--bordeaux)">Pan di Spagna</strong> —
+                  tagliato a metà e inzuppato con uno sciroppo leggero al limone.
+                </p>
+                <p>
+                  <strong style="color:var(--bordeaux)">Crostate di frutta</strong> —
+                  come base cremosa sotto la frutta fresca al posto della
+                  crema pasticcera.
+                </p>
+                <p>
+                  <strong style="color:var(--bordeaux)">Cialde e wafer</strong> —
+                  farciti al momento e serviti come piccola merenda golosa.
+                </p>
+                <p>
+                  <strong style="color:var(--bordeaux)">Al cucchiaio</strong> —
+                  servita in coppette con qualche briciola di biscotto
+                  secco e un filo di miele.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card note -->
+          <div class="sidebar-card">
+            <div class="sidebar-card-header">
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              Note e Varianti
+            </div>
+            <div class="sidebar-card-body">
+              <div class="notes-text">
+                <p>
+                  <strong style="color:var(--bordeaux)">Il freddo è tutto.</strong>
+                  Panna e latte condensato devono uscire dal frigorifero
+                  solo al momento di usarli. Se in casa fa caldo, tieni
+                  anche la ciotola e le fruste in freezer per 10 minuti prima
+                  di iniziare.
+                </p>
+                <p>
+                  Il <em>miele di acacia</em> ha un sapore più delicato
+                  e neutro, il <em>millefiori</em> è più aromatico.
+                  Entrambi funzionano; scegli in base al dolce che devi farcire.
+                </p>
+                <p>
+                  Per una crema <strong style="color:var(--bordeaux)">più dolce</strong>
+                  aumenta il latte condensato fino a 80 g.
+                  Per una versione <strong style="color:var(--bordeaux)">più leggera</strong>
+                  riduci il miele a mezzo cucchiaio.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </aside>
+
+        <!-- ═══════════════════════════════════════════════ -->
+        <!-- COLONNA DESTRA (2/3) — Preparazione            -->
+        <!-- ═══════════════════════════════════════════════ -->
+        <article class="recipe-preparation" aria-label="Preparazione della ricetta">
+
+          <p class="prep-intro">
+            Tre ingredienti, nessuna cottura, risultato garantito — a patto
+            di rispettare una sola regola: il freddo. La panna monta bene
+            solo se è fredda di frigorifero, e lo stesso vale per il latte
+            condensato. Con questi accorgimenti la crema è pronta in dieci
+            minuti e si conserva soda e soffice fino al momento di usarla.
+          </p>
+
+          <!-- ── Sezione 1: Montare la Panna ── -->
+          <section class="prep-section" aria-labelledby="cl-section1">
+            <h2 class="prep-section-title" id="cl-section1">
+              <span class="step-badge" aria-hidden="true">1</span>
+              Montare la Panna
+            </h2>
+            <div class="prep-steps">
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 1">1</span>
+                <p class="step-text">
+                  Versa la <strong>panna ben fredda</strong> in una ciotola
+                  capiente — idealmente raffreddata in frigorifero o in freezer
+                  per qualche minuto. Monta con le fruste elettriche a
+                  velocità media, aumentando gradualmente fino al massimo.
+                  Ci vorranno <em>3–4 minuti</em>.
+                </p>
+              </div>
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 2">2</span>
+                <p class="step-text">
+                  Continua a montare fino a ottenere una neve
+                  <strong>fermissima</strong>: la panna deve formare picchi
+                  sodi che non cadono quando sollevi le fruste, e deve
+                  mantenere le righe tracciate dalla frusta senza
+                  richiudersi. <em>Non fermarti prima</em>: una panna
+                  semimontata non reggerebbe il peso degli altri ingredienti.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- ── Sezione 2: Unire gli Ingredienti ── -->
+          <section class="prep-section" aria-labelledby="cl-section2">
+            <h2 class="prep-section-title" id="cl-section2">
+              <span class="step-badge" aria-hidden="true">2</span>
+              Unire gli Ingredienti
+            </h2>
+            <div class="prep-steps">
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 3">3</span>
+                <p class="step-text">
+                  Aggiungi il <strong>latte condensato freddo</strong>
+                  versandolo a filo sulla panna montata, quindi unisci
+                  il <strong>cucchiaio colmo di miele</strong>. Non usare
+                  le fruste elettriche in questa fase: rischieresti di
+                  smontare la panna.
+                </p>
+              </div>
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 4">4</span>
+                <p class="step-text">
+                  Incorpora gli ingredienti con una <strong>spatola</strong>,
+                  mescolando con movimenti <em>dal basso verso l'alto</em>,
+                  lenti e avvolgenti. Pochi gesti decisi sono sufficienti:
+                  la crema è pronta quando latte condensato e miele sono
+                  distribuiti in modo uniforme e il colore è omogeneo.
+                  Non mescolare oltre il necessario.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- ── Sezione 3: Conservazione e Utilizzo ── -->
+          <section class="prep-section" aria-labelledby="cl-section3">
+            <h2 class="prep-section-title" id="cl-section3">
+              <span class="step-badge" aria-hidden="true">3</span>
+              Conservazione e Utilizzo
+            </h2>
+            <div class="prep-steps">
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 5">5</span>
+                <p class="step-text">
+                  Se non usi la crema immediatamente, trasferiscila in
+                  una ciotola coperta con <strong>pellicola a contatto</strong>
+                  — cioè appoggiata direttamente sulla superficie della crema,
+                  senza spazio d'aria — e conserva in <strong>frigorifero</strong>
+                  fino al momento dell'utilizzo, per un massimo di
+                  <em>24–48 ore</em>.
+                </p>
+              </div>
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 6">6</span>
+                <p class="step-text">
+                  Al momento di usarla, mescola brevemente con la spatola:
+                  se nel frattempo si fosse leggermente rassodata,
+                  tornerà alla giusta consistenza in pochi secondi.
+                  Usala per farcire torte, pan di spagna, crostate
+                  o servila al cucchiaio. <em>Buon appetito!</em>
+                </p>
+              </div>
+            </div>
+          </section>
+
+        </article>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer (iniettato da JS) -->
+  <div id="footer"></div>
+
+  <!-- Script principale -->
+  <script src="js/main.js"></script>
+
+  <script>
+    document.querySelectorAll('.ingredient-item[tabindex]').forEach(item => {
+      item.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          item.click();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
