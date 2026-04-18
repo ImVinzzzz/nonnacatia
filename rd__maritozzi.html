@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Maritozzi — Soffici panini dolci lievitati, da farcire con panna o crema. La ricetta tradizionale. Le Ricette di Nonna Luisa." />
+
+  <title>Maritozzi — Le Ricette di Nonna Luisa</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon\favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon\favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon\apple-touch-icon.png">
+
+  <!-- Font Awesome Free -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Foglio di stile -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Navbar (iniettata da JS) -->
+  <div id="navbar"></div>
+
+  <main>
+
+    <!-- ── INTESTAZIONE RICETTA ──────────────────────────── -->
+    <header class="recipe-page-header">
+      <div class="container">
+        <div class="recipe-header-inner">
+
+          <!-- Colonna testo -->
+          <div class="recipe-header-text">
+
+            <nav class="breadcrumb" aria-label="Posizione nella gerarchia">
+              <a href="index.html">
+                <i class="fa-solid fa-house" aria-hidden="true"></i> Home
+              </a>
+              <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+              <a href="dolci.html">Dolci</a>
+              <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+              <span>Maritozzi</span>
+            </nav>
+
+            <div class="recipe-header-meta" style="margin-top:1.25rem;">
+              <span class="badge badge--cat">
+                <i class="fa-solid fa-cake-candles" aria-hidden="true"></i> Dolci
+              </span>
+              <span class="badge badge--time">
+                <i class="fa-regular fa-clock" aria-hidden="true"></i> 2 h 30 min
+              </span>
+              <span class="badge badge--diff facile">
+                <i class="fa-solid fa-gauge-simple-high" aria-hidden="true"></i> Facile
+              </span>
+            </div>
+
+            <h1 class="recipe-title">Maritozzi</h1>
+            <em class="recipe-title-script">Soffici, Dorati e Irresistibili</em>
+
+            <p class="recipe-intro">
+              Soffici come cuscini, dorati in superficie, con quella mollica
+              leggera e profumata che si riconosce al primo morso. I maritozzi
+              sono uno dei grandi lievitati della tradizione italiana: nati
+              come pane dolce del mattino, oggi sono protagonisti di colazioni
+              e merende. Questa ricetta dà un impasto versatile, perfetto da
+              gustare da soli o da farcire con panna montata, crema al latte
+              o marmellata.
+            </p>
+
+          </div>
+
+          <!-- Colonna immagine (placeholder) -->
+          <div class="recipe-header-image recipe-header-image--placeholder">
+            <i class="fa-regular fa-image" aria-hidden="true"></i>
+            <span>Foto in arrivo</span>
+          </div>
+          <!--
+          <div class="recipe-header-image">
+            <img src="img_ricette/rd__maritozzi.webp"
+                 alt="Maritozzi"
+                 loading="lazy" />
+          </div>
+          -->
+
+        </div>
+      </div>
+    </header>
+
+    <!-- ── LAYOUT A DUE COLONNE ──────────────────────────── -->
+    <div class="container">
+      <div class="recipe-layout">
+
+        <!-- ═══════════════════════════════════════════════ -->
+        <!-- COLONNA SINISTRA (1/3) — Sidebar               -->
+        <!-- ═══════════════════════════════════════════════ -->
+        <aside class="recipe-sidebar" aria-label="Informazioni e ingredienti">
+
+          <!-- Card info -->
+          <div class="sidebar-card">
+            <div class="sidebar-card-header">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              Informazioni
+            </div>
+            <div class="sidebar-card-body">
+              <div class="cooking-info-list">
+                <div class="info-item">
+                  <i class="fa-regular fa-clock" aria-hidden="true"></i>
+                  <span class="info-label">Preparazione</span>
+                  <span class="info-value">20 min</span>
+                </div>
+                <div class="info-item">
+                  <i class="fa-solid fa-snowflake" aria-hidden="true"></i>
+                  <span class="info-label">Riposo in frigo</span>
+                  <span class="info-value">30 min</span>
+                </div>
+                <div class="info-item">
+                  <i class="fa-solid fa-arrow-up-wide-short" aria-hidden="true"></i>
+                  <span class="info-label">Lievitazione</span>
+                  <span class="info-value">1 h 30 min</span>
+                </div>
+                <div class="info-item">
+                  <i class="fa-solid fa-fire-burner" aria-hidden="true"></i>
+                  <span class="info-label">Cottura</span>
+                  <span class="info-value">10 min a 180°</span>
+                </div>
+                <div class="info-item">
+                  <i class="fa-solid fa-cookie" aria-hidden="true"></i>
+                  <span class="info-label">Resa</span>
+                  <span class="info-value">~20 maritozzi</span>
+                </div>
+                <div class="info-item">
+                  <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                  <span class="info-label">Occasione</span>
+                  <span class="info-value">Colazione e merenda</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card ingredienti -->
+          <div class="sidebar-card">
+            <div class="sidebar-card-header">
+              <i class="fa-solid fa-list" aria-hidden="true"></i>
+              Ingredienti
+              <button id="resetChecklist"
+                      title="Deseleziona tutto"
+                      aria-label="Deseleziona tutti gli ingredienti"
+                      style="
+                        margin-left:auto;
+                        background:rgba(255,255,255,0.2);
+                        border:1px solid rgba(255,255,255,0.3);
+                        border-radius:6px;
+                        color:white;
+                        font-size:0.7rem;
+                        padding:0.2em 0.6em;
+                        cursor:pointer;
+                      ">
+                <i class="fa-solid fa-rotate-left" aria-hidden="true"></i> Reset
+              </button>
+            </div>
+            <div class="sidebar-card-body">
+
+              <p style="font-size:0.75rem; color:var(--ink-muted); font-style:italic; margin-bottom:0.75rem;">
+                <i class="fa-regular fa-hand-pointer" aria-hidden="true"></i>
+                Clicca per spuntare gli ingredienti
+              </p>
+
+              <div class="ingredient-list" role="list">
+
+                <p class="ingredient-section-label">Per l'impasto</p>
+
+                <div class="ingredient-item" role="listitem" data-ingredient="m1" tabindex="0">
+                  <span class="ingredient-check" aria-hidden="true"></span>
+                  <span class="ingredient-qty">1 kg</span>
+                  <span class="ingredient-name">Farina 00</span>
+                </div>
+                <div class="ingredient-item" role="listitem" data-ingredient="m2" tabindex="0">
+                  <span class="ingredient-check" aria-hidden="true"></span>
+                  <span class="ingredient-qty">500 ml</span>
+                  <span class="ingredient-name">Latte intero (tiepido)</span>
+                </div>
+                <div class="ingredient-item" role="listitem" data-ingredient="m3" tabindex="0">
+                  <span class="ingredient-check" aria-hidden="true"></span>
+                  <span class="ingredient-qty">2 cubetti</span>
+                  <span class="ingredient-name">Lievito di birra fresco (50 g totali)</span>
+                </div>
+                <div class="ingredient-item" role="listitem" data-ingredient="m4" tabindex="0">
+                  <span class="ingredient-check" aria-hidden="true"></span>
+                  <span class="ingredient-qty">1 bicchiere</span>
+                  <span class="ingredient-name">Olio di semi (circa 100 ml)</span>
+                </div>
+                <div class="ingredient-item" role="listitem" data-ingredient="m5" tabindex="0">
+                  <span class="ingredient-check" aria-hidden="true"></span>
+                  <span class="ingredient-qty">2</span>
+                  <span class="ingredient-name">Tuorli d'uovo (a temperatura ambiente)</span>
+                </div>
+                <div class="ingredient-item" role="listitem" data-ingredient="m6" tabindex="0">
+                  <span class="ingredient-check" aria-hidden="true"></span>
+                  <span class="ingredient-qty">6 cucchiai</span>
+                  <span class="ingredient-name">Zucchero semolato</span>
+                </div>
+
+                <p class="ingredient-section-label">Per spennellare</p>
+
+                <div class="ingredient-item" role="listitem" data-ingredient="m7" tabindex="0">
+                  <span class="ingredient-check" aria-hidden="true"></span>
+                  <span class="ingredient-qty">1</span>
+                  <span class="ingredient-name">Uovo intero (o tuorlo + latte)</span>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Card farciture -->
+          <div class="sidebar-card">
+            <div class="sidebar-card-header">
+              <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+              Idee per la Farcitura
+            </div>
+            <div class="sidebar-card-body">
+              <div class="notes-text">
+                <p>
+                  I maritozzi si prestano a infinite varianti. Le farciture
+                  più amate:
+                </p>
+                <p>
+                  <strong style="color:var(--bordeaux)">Panna montata</strong> —
+                  la versione romana classica, abbondante e senza fronzoli.
+                </p>
+                <p>
+                  <strong style="color:var(--bordeaux)">
+                    <a href="rd_4_crema-latte.html"
+                       style="color:var(--bordeaux); text-decoration:underline;">
+                      Crema al latte
+                    </a>
+                  </strong> —
+                  più delicata della panna, soffice e leggermente mielata.
+                </p>
+                <p>
+                  <strong style="color:var(--bordeaux)">Marmellata</strong> —
+                  albicocca o arancia per un abbinamento agrumato e profumato.
+                </p>
+                <p>
+                  <strong style="color:var(--bordeaux)">Nutella e panna</strong> —
+                  la versione golosa per i più piccoli.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card note della nonna -->
+          <div class="sidebar-card">
+            <div class="sidebar-card-header">
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              I Segreti di Nonna
+            </div>
+            <div class="sidebar-card-body">
+              <div class="notes-text">
+                <p>
+                  <strong style="color:var(--bordeaux)">Il riposo in frigorifero</strong>
+                  è il passaggio che distingue questa ricetta: il freddo
+                  rallenta il lievito, rende l'impasto più maneggevole
+                  e sviluppa un sapore più complesso. Non saltarlo.
+                </p>
+                <p>
+                  Il latte deve essere <em>tiepido</em>, non caldo:
+                  35–38°C è la temperatura ideale per il lievito.
+                  Se scotta, lo uccide.
+                </p>
+                <p>
+                  <strong style="color:var(--bordeaux)">10 minuti a 180°
+                  sono pochi</strong>, ma bastano: i maritozzi sono piccoli
+                  e cuociono in fretta. Appena dorati in superficie
+                  sono pronti. Lasciandoli troppo diventano secchi.
+                </p>
+                <p>
+                  Conservali in un sacchetto di carta o in una scatola
+                  di latta: si mantengono morbidi per
+                  <em>1–2 giorni</em>. Da farcire, sempre al momento
+                  di servire.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </aside>
+
+        <!-- ═══════════════════════════════════════════════ -->
+        <!-- COLONNA DESTRA (2/3) — Preparazione            -->
+        <!-- ═══════════════════════════════════════════════ -->
+        <article class="recipe-preparation" aria-label="Preparazione della ricetta">
+
+          <p class="prep-intro">
+            I maritozzi sono un lievitato semplice: pochi ingredienti,
+            nessuna tecnica complicata. Il processo si articola in quattro
+            momenti — l'impasto, il riposo in frigorifero, la formatura
+            con la seconda lievitazione, e la cottura rapida. Il risultato
+            sono panini dorati, profumati e leggerissimi, pronti per
+            essere farciti a piacere.
+          </p>
+
+          <!-- ── Sezione 1: Il Lievito e l'Impasto ── -->
+          <section class="prep-section" aria-labelledby="m-section1">
+            <h2 class="prep-section-title" id="m-section1">
+              <span class="step-badge" aria-hidden="true">1</span>
+              Il Lievito e l'Impasto
+            </h2>
+            <div class="prep-steps">
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 1">1</span>
+                <p class="step-text">
+                  Scalda il latte fino a renderlo <strong>tiepido</strong>
+                  (circa 35–38°C). Sbriciola i <strong>due cubetti di
+                  lievito</strong> direttamente nel latte tiepido e mescola
+                  con un cucchiaio fino a scioglimento completo. Aggiungi
+                  un cucchiaino di zucchero (preso dai 6) e lascia riposare
+                  <em>5–10 minuti</em>: si formerà una leggera schiuma
+                  in superficie, segno che il lievito è attivo.
+                </p>
+              </div>
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 2">2</span>
+                <p class="step-text">
+                  In una ciotola capiente — o sulla spianatoia —
+                  versa la <strong>farina</strong> a fontana. Al centro
+                  aggiungi i <strong>tuorli</strong>, lo <strong>zucchero</strong>
+                  restante e l'<strong>olio di semi</strong>. Versa a filo
+                  il latte con il lievito e inizia a mescolare, prima con
+                  una forchetta poi con le mani, incorporando la farina
+                  dall'interno verso l'esterno.
+                </p>
+              </div>
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 3">3</span>
+                <p class="step-text">
+                  Lavora l'impasto a mano per <strong>8–10 minuti</strong>,
+                  spingendo con il palmo, piegando e ruotando, fino a
+                  ottenere un panetto <em>liscio, morbido ed elastico</em>.
+                  Non deve appiccicarsi alle mani — se dovesse farlo,
+                  aggiungi pochissima farina alla volta.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- ── Sezione 2: Riposo in Frigorifero ── -->
+          <section class="prep-section" aria-labelledby="m-section2">
+            <h2 class="prep-section-title" id="m-section2">
+              <span class="step-badge" aria-hidden="true">2</span>
+              Riposo in Frigorifero
+            </h2>
+            <div class="prep-steps">
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 4">4</span>
+                <p class="step-text">
+                  Forma una palla con l'impasto, avvolgila nella
+                  <strong>pellicola alimentare</strong> e riponila
+                  in frigorifero per <strong>30 minuti</strong>.
+                  Il freddo blocca temporaneamente l'azione del lievito,
+                  rende l'impasto più compatto e facile da formare,
+                  e favorisce lo sviluppo degli aromi.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- ── Sezione 3: Formatura e Lievitazione ── -->
+          <section class="prep-section" aria-labelledby="m-section3">
+            <h2 class="prep-section-title" id="m-section3">
+              <span class="step-badge" aria-hidden="true">3</span>
+              Formatura e Seconda Lievitazione
+            </h2>
+            <div class="prep-steps">
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 5">5</span>
+                <p class="step-text">
+                  Riprendi l'impasto dal frigorifero e dividilo in
+                  porzioni da circa <strong>50–60 g</strong> ciascuna —
+                  indicativamente la dimensione di una pallina da golf.
+                  Forma ogni pezzo a mano: appiattisci leggermente,
+                  porta i bordi verso il centro e richiudi pizzicando,
+                  poi rovescia sul piano e arrotola con il palmo fino
+                  a ottenere un <em>panino ovale e liscio</em>.
+                </p>
+              </div>
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 6">6</span>
+                <p class="step-text">
+                  Disponi i maritozzi su una o due <strong>teglie
+                  rivestite di carta forno</strong>, ben distanziati
+                  tra loro (lieviteranno e si allargheranno).
+                  Coprili con un canovaccio pulito e lasciali lievitare
+                  in un posto caldo per <strong>1 ora – 1 ora e mezza</strong>,
+                  fino a quando non saranno visibilmente gonfi e
+                  avranno quasi raddoppiato di volume.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- ── Sezione 4: Cottura ── -->
+          <section class="prep-section" aria-labelledby="m-section4">
+            <h2 class="prep-section-title" id="m-section4">
+              <span class="step-badge" aria-hidden="true">4</span>
+              Cottura e Finitura
+            </h2>
+            <div class="prep-steps">
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 7">7</span>
+                <p class="step-text">
+                  Preriscalda il forno a <strong>180°C</strong> statico.
+                  Prima di infornare, <strong>spennella delicatamente</strong>
+                  la superficie di ogni maritozzo con un uovo sbattuto
+                  (o con un tuorlo allungato con un goccio di latte):
+                  darà un colore dorato e lucido in cottura.
+                </p>
+              </div>
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 8">8</span>
+                <p class="step-text">
+                  Inforna nella parte centrale del forno e cuoci per
+                  <strong>10 minuti</strong>. I maritozzi cuociono in
+                  fretta: tienili d'occhio dalla fine dell'ottavo minuto.
+                  Sono pronti quando la superficie è <em>dorata in modo
+                  uniforme</em> e la base suona vuota se la batti
+                  leggermente con le nocche.
+                </p>
+              </div>
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 9">9</span>
+                <p class="step-text">
+                  Sforna e lascia raffreddare su una griglia.
+                  <strong>Non farcire finché sono caldi</strong>:
+                  la farcitura si scioglierebbe. Una volta freddi,
+                  incidili longitudinalmente con un coltello affilato
+                  senza arrivare in fondo, farcisci con abbondante
+                  panna montata o crema al latte e servi subito.
+                  <em>Buon appetito!</em>
+                </p>
+              </div>
+            </div>
+          </section>
+
+        </article>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer (iniettato da JS) -->
+  <div id="footer"></div>
+
+  <!-- Script principale -->
+  <script src="js/main.js"></script>
+
+  <script>
+    document.querySelectorAll('.ingredient-item[tabindex]').forEach(item => {
+      item.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          item.click();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
