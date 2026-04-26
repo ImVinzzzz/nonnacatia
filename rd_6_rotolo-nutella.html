@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Rotolo alla Nutella — Pan di Spagna soffice arrotolato con farcitura alla Nutella, spolverato di zucchero a velo. Le Ricette di Nonna Luisa." />
+
+  <title>Rotolo alla Nutella — Le Ricette di Nonna Luisa</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon\favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon\favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon\apple-touch-icon.png">
+
+  <!-- Font Awesome Free -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Foglio di stile -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Navbar (iniettata da JS) -->
+  <div id="navbar"></div>
+
+  <main>
+
+    <!-- ── INTESTAZIONE RICETTA ──────────────────────────── -->
+    <header class="recipe-page-header">
+      <div class="container">
+        <div class="recipe-header-inner">
+
+          <!-- Colonna testo -->
+          <div class="recipe-header-text">
+
+            <nav class="breadcrumb" aria-label="Posizione nella gerarchia">
+              <a href="index.html">
+                <i class="fa-solid fa-house" aria-hidden="true"></i> Home
+              </a>
+              <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+              <a href="dolci.html">Dolci</a>
+              <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+              <span>Rotolo alla Nutella</span>
+            </nav>
+
+            <div class="recipe-header-meta" style="margin-top:1.25rem;">
+              <span class="badge badge--cat">
+                <i class="fa-solid fa-cake-candles" aria-hidden="true"></i> Dolci
+              </span>
+              <span class="badge badge--time">
+                <i class="fa-regular fa-clock" aria-hidden="true"></i> 45 min
+              </span>
+              <span class="badge badge--diff facile">
+                <i class="fa-solid fa-gauge-simple-high" aria-hidden="true"></i> Facile
+              </span>
+            </div>
+
+            <h1 class="recipe-title">Rotolo<br>alla Nutella</h1>
+            <em class="recipe-title-script">Soffice, Goloso, Impossibile da Resistere</em>
+
+            <p class="recipe-intro">
+              Un pan di spagna sottile e soffice come un velo, arrotolato
+              ancora caldo su sé stesso, poi farcito con uno strato generoso
+              di Nutella e riavvolto in un cilindro perfetto.
+              Spolverato di zucchero a velo, è uno di quei dolci che
+              sembrano elaborati ma si preparano in meno di un'ora —
+              e che spariscono dal piatto ancora più in fretta.
+            </p>
+
+          </div>
+
+          <!-- Colonna immagine -->
+          <div class="recipe-header-image">
+            <img src="img_ricette/rd_6_rotolo-nutella.webp"
+                 alt="Rotolo alla Nutella — vista della fetta e del rotolo intero"
+                 loading="lazy" />
+          </div>
+
+        </div>
+      </div>
+    </header>
+
+    <!-- ── LAYOUT A DUE COLONNE ──────────────────────────── -->
+    <div class="container">
+      <div class="recipe-layout">
+
+        <!-- ═══════════════════════════════════════════════ -->
+        <!-- COLONNA SINISTRA (1/3) — Sidebar               -->
+        <!-- ═══════════════════════════════════════════════ -->
+        <aside class="recipe-sidebar" aria-label="Informazioni e ingredienti">
+
+          <!-- Card info -->
+          <div class="sidebar-card">
+            <div class="sidebar-card-header">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              Informazioni
+            </div>
+            <div class="sidebar-card-body">
+              <div class="cooking-info-list">
+                <div class="info-item">
+                  <i class="fa-regular fa-clock" aria-hidden="true"></i>
+                  <span class="info-label">Preparazione</span>
+                  <span class="info-value">25 min</span>
+                </div>
+                <div class="info-item">
+                  <i class="fa-solid fa-fire-burner" aria-hidden="true"></i>
+                  <span class="info-label">Cottura</span>
+                  <span class="info-value">10 min a 170°</span>
+                </div>
+                <div class="info-item">
+                  <i class="fa-solid fa-snowflake" aria-hidden="true"></i>
+                  <span class="info-label">Riposo</span>
+                  <span class="info-value">10 min</span>
+                </div>
+                <div class="info-item">
+                  <i class="fa-solid fa-users" aria-hidden="true"></i>
+                  <span class="info-label">Porzioni</span>
+                  <span class="info-value">8–10 fette</span>
+                </div>
+                <div class="info-item">
+                  <i class="fa-solid fa-gauge-simple-high" aria-hidden="true"></i>
+                  <span class="info-label">Difficoltà</span>
+                  <span class="info-value">Facile</span>
+                </div>
+                <div class="info-item">
+                  <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                  <span class="info-label">Occasione</span>
+                  <span class="info-value">Merenda e dessert</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card ingredienti -->
+          <div class="sidebar-card">
+            <div class="sidebar-card-header">
+              <i class="fa-solid fa-list" aria-hidden="true"></i>
+              Ingredienti
+              <button id="resetChecklist"
+                      title="Deseleziona tutto"
+                      aria-label="Deseleziona tutti gli ingredienti"
+                      style="
+                        margin-left:auto;
+                        background:rgba(255,255,255,0.2);
+                        border:1px solid rgba(255,255,255,0.3);
+                        border-radius:6px;
+                        color:white;
+                        font-size:0.7rem;
+                        padding:0.2em 0.6em;
+                        cursor:pointer;
+                      ">
+                <i class="fa-solid fa-rotate-left" aria-hidden="true"></i> Reset
+              </button>
+            </div>
+            <div class="sidebar-card-body">
+
+              <p style="font-size:0.75rem; color:var(--ink-muted); font-style:italic; margin-bottom:0.75rem;">
+                <i class="fa-regular fa-hand-pointer" aria-hidden="true"></i>
+                Clicca per spuntare gli ingredienti
+              </p>
+
+              <div class="ingredient-list" role="list">
+
+                <p class="ingredient-section-label">Per il biscuit</p>
+
+                <div class="ingredient-item" role="listitem" data-ingredient="rn1" tabindex="0">
+                  <span class="ingredient-check" aria-hidden="true"></span>
+                  <span class="ingredient-qty">4</span>
+                  <span class="ingredient-name">Uova (a temperatura ambiente, separate)</span>
+                </div>
+                <div class="ingredient-item" role="listitem" data-ingredient="rn2" tabindex="0">
+                  <span class="ingredient-check" aria-hidden="true"></span>
+                  <span class="ingredient-qty">80 g</span>
+                  <span class="ingredient-name">Zucchero semolato</span>
+                </div>
+                <div class="ingredient-item" role="listitem" data-ingredient="rn3" tabindex="0">
+                  <span class="ingredient-check" aria-hidden="true"></span>
+                  <span class="ingredient-qty">50 ml</span>
+                  <span class="ingredient-name">Olio di semi</span>
+                </div>
+                <div class="ingredient-item" role="listitem" data-ingredient="rn4" tabindex="0">
+                  <span class="ingredient-check" aria-hidden="true"></span>
+                  <span class="ingredient-qty">50 ml</span>
+                  <span class="ingredient-name">Latte intero</span>
+                </div>
+                <div class="ingredient-item" role="listitem" data-ingredient="rn5" tabindex="0">
+                  <span class="ingredient-check" aria-hidden="true"></span>
+                  <span class="ingredient-qty">70 g</span>
+                  <span class="ingredient-name">Farina 00</span>
+                </div>
+                <div class="ingredient-item" role="listitem" data-ingredient="rn6" tabindex="0">
+                  <span class="ingredient-check" aria-hidden="true"></span>
+                  <span class="ingredient-qty">q.b.</span>
+                  <span class="ingredient-name">Estratto di vaniglia</span>
+                </div>
+
+                <p class="ingredient-section-label">Per la farcitura</p>
+
+                <div class="ingredient-item" role="listitem" data-ingredient="rn7" tabindex="0">
+                  <span class="ingredient-check" aria-hidden="true"></span>
+                  <span class="ingredient-qty">200–250 g</span>
+                  <span class="ingredient-name">Nutella (a temperatura ambiente)</span>
+                </div>
+
+                <p class="ingredient-section-label">Per decorare</p>
+
+                <div class="ingredient-item" role="listitem" data-ingredient="rn8" tabindex="0">
+                  <span class="ingredient-check" aria-hidden="true"></span>
+                  <span class="ingredient-qty">q.b.</span>
+                  <span class="ingredient-name">Zucchero a velo</span>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Card note della nonna -->
+          <div class="sidebar-card">
+            <div class="sidebar-card-header">
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              I Segreti di Nonna
+            </div>
+            <div class="sidebar-card-body">
+              <div class="notes-text">
+                <p>
+                  <strong style="color:var(--bordeaux)">Arrotolalo subito,
+                  ancora caldo.</strong> È il passaggio più critico:
+                  il biscuit caldo è flessibile e si arrotola senza
+                  spaccarsi. Se aspetti che si freddi, si romperà.
+                  Un canovaccio umido aiuta a mantenerlo morbido
+                  durante il raffreddamento.
+                </p>
+                <p>
+                  La Nutella si stende meglio se è
+                  <em>a temperatura ambiente</em> o leggermente
+                  intiepidita: fredda di frigo è troppo dura
+                  e rischia di strappare la sfoglia.
+                </p>
+                <p>
+                  <strong style="color:var(--bordeaux)">Lo zucchero a velo
+                  va aggiunto solo prima di servire</strong>:
+                  se applicato troppo in anticipo viene assorbito
+                  dall'umidità e scompare.
+                </p>
+                <p>
+                  Avanzato, si conserva in frigorifero avvolto
+                  nella pellicola per <em>2–3 giorni</em>.
+                  Prima di servire, portalo a temperatura ambiente
+                  per 15 minuti: il biscuit riacquista morbidezza.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </aside>
+
+        <!-- ═══════════════════════════════════════════════ -->
+        <!-- COLONNA DESTRA (2/3) — Preparazione            -->
+        <!-- ═══════════════════════════════════════════════ -->
+        <article class="recipe-preparation" aria-label="Preparazione della ricetta">
+
+          <p class="prep-intro">
+            Il rotolo si prepara in tre fasi ben distinte: il biscuit, sottile
+            e soffice, cotto rapidamente ad alta temperatura; l'arrotolamento
+            a caldo, che gli dà forma senza spaccarlo; e la farcitura
+            con la Nutella, prima di richiuderlo nel suo cilindro definitivo.
+            Ogni passaggio è semplice — l'importante è non saltare nessuno.
+          </p>
+
+          <!-- ── Sezione 1: I Tuorli e la Base ── -->
+          <section class="prep-section" aria-labelledby="rn-section1">
+            <h2 class="prep-section-title" id="rn-section1">
+              <span class="step-badge" aria-hidden="true">1</span>
+              La Base: Tuorli e Composto
+            </h2>
+            <div class="prep-steps">
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 1">1</span>
+                <p class="step-text">
+                  Preriscalda il forno a <strong>170°C</strong> statico.
+                  Separa i tuorli dagli albumi tenendoli in due ciotole
+                  separate. Metti gli albumi da parte in frigorifero.
+                </p>
+              </div>
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 2">2</span>
+                <p class="step-text">
+                  Lavora i <strong>tuorli con lo zucchero</strong> usando
+                  le fruste elettriche a velocità media per 3–4 minuti,
+                  fino a ottenere un composto <em>chiaro, gonfio e spumoso</em>.
+                  Aggiungi l'<strong>estratto di vaniglia</strong> e
+                  mescola brevemente.
+                </p>
+              </div>
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 3">3</span>
+                <p class="step-text">
+                  Con le fruste a bassa velocità, incorpora
+                  l'<strong>olio di semi</strong> a filo, poi il
+                  <strong>latte</strong>. Aggiungi infine la
+                  <strong>farina setacciata</strong> in due riprese,
+                  mescolando fino ad ottenere un composto liscio
+                  e senza grumi. Non lavorarlo eccessivamente.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- ── Sezione 2: Albumi e Cottura ── -->
+          <section class="prep-section" aria-labelledby="rn-section2">
+            <h2 class="prep-section-title" id="rn-section2">
+              <span class="step-badge" aria-hidden="true">2</span>
+              Albumi a Neve e Cottura
+            </h2>
+            <div class="prep-steps">
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 4">4</span>
+                <p class="step-text">
+                  Monta gli <strong>albumi a neve ferma</strong> con fruste
+                  pulite e asciutte. Devono formare picchi sodi e lucidi.
+                  Incorporali al composto in <strong>due o tre riprese</strong>
+                  con una spatola, mescolando <em>dal basso verso l'alto</em>
+                  con gesti lenti e ampi per non perdere l'aria.
+                </p>
+              </div>
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 5">5</span>
+                <p class="step-text">
+                  Rivesti una <strong>teglia rettangolare</strong> (circa
+                  30×40 cm) con carta forno ben aderente ai bordi.
+                  Versa il composto e distribuiscilo in uno strato
+                  <em>uniforme e sottile</em> con una spatola a gomito
+                  o il dorso di un cucchiaio. Lo spessore deve essere
+                  omogeneo: un biscuit irregolare si arrotolerà
+                  in modo non uniforme.
+                </p>
+              </div>
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 6">6</span>
+                <p class="step-text">
+                  Inforna nella parte centrale del forno e cuoci per
+                  <strong>10 minuti</strong>. Il biscuit è pronto quando
+                  è <em>dorato in modo uniforme</em>, leggermente gonfio
+                  e si stacca leggermente dai bordi della carta forno.
+                  Non cuocerlo troppo: deve restare elastico.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- ── Sezione 3: L'Arrotolamento ── -->
+          <section class="prep-section" aria-labelledby="rn-section3">
+            <h2 class="prep-section-title" id="rn-section3">
+              <span class="step-badge" aria-hidden="true">3</span>
+              L'Arrotolamento a Caldo
+            </h2>
+            <div class="prep-steps">
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 7">7</span>
+                <p class="step-text">
+                  Questo è il passaggio più delicato e va fatto
+                  <strong>subito, appena sfornato</strong>. Stendi un
+                  canovaccio da cucina pulito sul piano di lavoro
+                  e spolveralo con un po' di zucchero a velo.
+                  Capovolgi il biscuit caldo sul canovaccio e rimuovi
+                  delicatamente la carta forno, partendo da un angolo
+                  e tirandola con cautela.
+                </p>
+              </div>
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 8">8</span>
+                <p class="step-text">
+                  Arrotola il biscuit <strong>insieme al canovaccio</strong>
+                  su sé stesso, partendo dal lato corto. Stringi leggermente
+                  ma con decisione. Lascialo raffreddare completamente
+                  in questa forma, avvolto nel canovaccio, per almeno
+                  <em>10–15 minuti</em>: il biscuit prenderà la forma
+                  del rotolo e non si spaccherà quando lo srotolerai.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- ── Sezione 4: Farcitura e Finitura ── -->
+          <section class="prep-section" aria-labelledby="rn-section4">
+            <h2 class="prep-section-title" id="rn-section4">
+              <span class="step-badge" aria-hidden="true">4</span>
+              Farcitura, Chiusura e Decorazione
+            </h2>
+            <div class="prep-steps">
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 9">9</span>
+                <p class="step-text">
+                  Srotola delicatamente il biscuit raffreddato.
+                  Distribuisci la <strong>Nutella a temperatura ambiente</strong>
+                  su tutta la superficie con una spatola, lasciando libero
+                  un margine di circa <em>1–2 cm</em> sul lato più lontano
+                  da te: quando arrotolerai, la crema tenderà a spostarsi
+                  in avanti e colmerebbe quel bordo.
+                </p>
+              </div>
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 10">10</span>
+                <p class="step-text">
+                  Arrotola di nuovo il biscuit su sé stesso, questa volta
+                  <strong>senza il canovaccio</strong>, stringendo con
+                  delicatezza per ottenere un cilindro compatto e regolare.
+                  Avvolgi il rotolo nella pellicola alimentare e riponilo
+                  in frigorifero per almeno <em>30 minuti</em>:
+                  la Nutella si rassoderà e il rotolo terrà la forma
+                  in modo perfetto al taglio.
+                </p>
+              </div>
+              <div class="prep-step">
+                <span class="step-num" aria-label="Passo 11">11</span>
+                <p class="step-text">
+                  Al momento di servire, rimuovi la pellicola e
+                  sistema il rotolo su un piatto da portata.
+                  Con un colino a maglie fini, <strong>spolvera
+                  abbondantemente di zucchero a velo</strong> tutta
+                  la superficie. Taglia a fette di circa 2 cm
+                  con un coltello affilato e dai un colpo deciso —
+                  eviterai che la farcitura si schiaccia.
+                  <em>Buon appetito!</em>
+                </p>
+              </div>
+            </div>
+          </section>
+
+        </article>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer (iniettato da JS) -->
+  <div id="footer"></div>
+
+  <!-- Script principale -->
+  <script src="js/main.js"></script>
+
+  <script>
+    document.querySelectorAll('.ingredient-item[tabindex]').forEach(item => {
+      item.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          item.click();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
