@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link, Navigate, Route, Routes, useLocation, useParams } from 'react-router-dom'
 import { categories, getCategory, getRecipe } from './data'
+import RecipeEditor from './RecipeEditor'
 import type { Category, CategoryRecipe, Recipe } from './types'
 
 const Container = ({ children, className = '' }: { children: React.ReactNode; className?: string }) => (
@@ -66,6 +67,7 @@ function Footer() {
           <div>
             <h4 className="mb-5 font-display text-sm font-semibold uppercase tracking-[0.15em] text-cream">Il Ricettario</h4>
             <p className="text-sm leading-7">Anni di tradizione raccolti in queste pagine: dalle domeniche in famiglia ai segreti più gelosamente custoditi, ogni ricetta racconta una storia.</p>
+            <Link to="/editor-ricette" className="mt-6 inline-flex items-center gap-2 rounded-lg border border-gold/40 px-3 py-2 text-sm text-gold transition hover:border-gold hover:bg-gold/10"><i className="fa-solid fa-pen-to-square" aria-hidden="true" />Apri l’editor ricette</Link>
             <div className="mt-6 flex gap-5 text-xl text-cream/20"><i className="fa-solid fa-seedling" /><i className="fa-solid fa-fire-flame-curved" /><i className="fa-solid fa-star" /><i className="fa-solid fa-leaf" /></div>
           </div>
         </div>
@@ -76,7 +78,7 @@ function Footer() {
 }
 
 function SiteLayout() {
-  return <><Navbar /><main className="pt-[72px]"><Routes><Route path="/" element={<HomePage />} /><Route path="/category/:categoryId" element={<CategoryPage />} /><Route path="/recipe/:recipeId" element={<RecipePage />} /><Route path="/rd_0_dolci.html" element={<Navigate to="/category/rd_0_dolci" replace />} /><Route path="/ro_0_occasioni.html" element={<Navigate to="/category/ro_0_occasioni" replace />} /><Route path="/rp_0_primi.html" element={<Navigate to="/category/rp_0_primi" replace />} /><Route path="/rd_1_tiramisu.html" element={<Navigate to="/recipe/rd_1_tiramisu" replace />} /><Route path="/rd_2_ferratelle-irma.html" element={<Navigate to="/recipe/rd_2_ferratelle-irma" replace />} /><Route path="/rd_3_torta-margherita.html" element={<Navigate to="/recipe/rd_3_torta-margherita" replace />} /><Route path="/rd_4_crema-latte.html" element={<Navigate to="/recipe/rd_4_crema-latte" replace />} /><Route path="/rd_5_maritozzi.html" element={<Navigate to="/recipe/rd_5_maritozzi" replace />} /><Route path="/rd_6_rotolo-nutella.html" element={<Navigate to="/recipe/rd_6_rotolo-nutella" replace />} /><Route path="/ro_1_pizza-pasqua.html" element={<Navigate to="/recipe/ro_1_pizza-pasqua" replace />} /><Route path="/rp_1_tagliatelle.html" element={<Navigate to="/recipe/rp_1_tagliatelle" replace />} /><Route path="*" element={<NotFound />} /></Routes></main><Footer /><BackToTop /></>
+  return <><Navbar /><main className="pt-[72px]"><Routes><Route path="/" element={<HomePage />} /><Route path="/category/:categoryId" element={<CategoryPage />} /><Route path="/recipe/:recipeId" element={<RecipePage />} /><Route path="/editor-ricette" element={<RecipeEditor />} /><Route path="/rd_0_dolci.html" element={<Navigate to="/category/rd_0_dolci" replace />} /><Route path="/ro_0_occasioni.html" element={<Navigate to="/category/ro_0_occasioni" replace />} /><Route path="/rp_0_primi.html" element={<Navigate to="/category/rp_0_primi" replace />} /><Route path="/rd_1_tiramisu.html" element={<Navigate to="/recipe/rd_1_tiramisu" replace />} /><Route path="/rd_2_ferratelle-irma.html" element={<Navigate to="/recipe/rd_2_ferratelle-irma" replace />} /><Route path="/rd_3_torta-margherita.html" element={<Navigate to="/recipe/rd_3_torta-margherita" replace />} /><Route path="/rd_4_crema-latte.html" element={<Navigate to="/recipe/rd_4_crema-latte" replace />} /><Route path="/rd_5_maritozzi.html" element={<Navigate to="/recipe/rd_5_maritozzi" replace />} /><Route path="/rd_6_rotolo-nutella.html" element={<Navigate to="/recipe/rd_6_rotolo-nutella" replace />} /><Route path="/ro_1_pizza-pasqua.html" element={<Navigate to="/recipe/ro_1_pizza-pasqua" replace />} /><Route path="/rp_1_tagliatelle.html" element={<Navigate to="/recipe/rp_1_tagliatelle" replace />} /><Route path="*" element={<NotFound />} /></Routes></main><Footer /><BackToTop /></>
 }
 
 function HomePage() {
